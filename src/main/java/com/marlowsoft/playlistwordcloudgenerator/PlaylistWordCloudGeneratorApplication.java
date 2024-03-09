@@ -12,12 +12,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class PlaylistwordcloudgeneratorApplication {
+public class PlaylistWordCloudGeneratorApplication {
   private static final Logger LOGGER =
-      LogManager.getLogger(PlaylistwordcloudgeneratorApplication.class);
+      LogManager.getLogger(PlaylistWordCloudGeneratorApplication.class);
 
   public static void main(String[] args) {
-    SpringApplication.run(PlaylistwordcloudgeneratorApplication.class, args);
+    SpringApplication.run(PlaylistWordCloudGeneratorApplication.class, args);
   }
 
   @Bean
