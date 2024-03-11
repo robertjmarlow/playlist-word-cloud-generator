@@ -26,6 +26,7 @@ dependencies {
 	implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.google.guava:guava:33.0.0-jre'
 }
 
 tasks.named('test') {

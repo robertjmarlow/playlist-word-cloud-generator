@@ -41,15 +41,17 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
 
   private final ObjectMapper objectMapper;
 
+  private final HttpClient.Builder httpClientBuilder;
+
   @Autowired
-  SpotifyPlaylistRetriever(ObjectMapper objectMapper) {
+  SpotifyPlaylistRetriever(ObjectMapper objectMapper, HttpClient.Builder httpClientBuilder) {
     this.objectMapper = objectMapper;
+    this.httpClientBuilder = httpClientBuilder;
   }
 
   @Override
   public Playlist getPlaylist(String identifier) throws IOException, InterruptedException {
-    // TODO inject this builder instead of hardcoding the "real" one
-    try (final HttpClient client = HttpClient.newBuilder().build()) {
+    try (final HttpClient client = httpClientBuilder.build()) {
       final HttpResponse<String> response =
           client.send(
               HttpRequest.newBuilder()
@@ -78,8 +80,7 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
   }
 
   private String getOauthToken() throws IOException, InterruptedException {
-    // TODO inject this builder instead of hardcoding the "real" one
-    try (final HttpClient client = HttpClient.newBuilder().build()) {
+    try (final HttpClient client = httpClientBuilder.build()) {
       final HttpResponse<String> response =
           client.send(
               HttpRequest.newBuilder()
