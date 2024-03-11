@@ -50,46 +50,52 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
   public Playlist getPlaylist(String identifier) throws IOException, InterruptedException {
     // TODO inject this builder instead of hardcoding the "real" one
     try (final HttpClient client = HttpClient.newBuilder().build()) {
-      final HttpResponse<String> response =
-          client.send(
-              HttpRequest.newBuilder()
-                  .header("Authorization", String.format("Bearer %s", getOauthToken()))
-                  .uri(
-                      UriComponentsBuilder.newInstance()
-                          .scheme("https")
-                          .host("api.spotify.com")
-                          .path("v1/playlists/{playlist-id}")
-                          .buildAndExpand(identifier)
-                          .toUri())
-                  .GET()
-                  .build(),
-              HttpResponse.BodyHandlers.ofString());
-      return objectMapper.readValue(response.body(), Playlist.class);
+      return objectMapper.readValue(
+          client
+              .send(
+                  HttpRequest.newBuilder()
+                      .header("Authorization", String.format("Bearer %s", getOauthToken()))
+                      .uri(
+                          UriComponentsBuilder.newInstance()
+                              .scheme("https")
+                              .host("api.spotify.com")
+                              .path("v1/playlists/{playlist-id}")
+                              .buildAndExpand(identifier)
+                              .toUri())
+                      .GET()
+                      .build(),
+                  HttpResponse.BodyHandlers.ofString())
+              .body(),
+          Playlist.class);
     }
   }
 
   private String getOauthToken() throws IOException, InterruptedException {
     // TODO inject this builder instead of hardcoding the "real" one
     try (final HttpClient client = HttpClient.newBuilder().build()) {
-      final HttpResponse<String> response =
-          client.send(
-              HttpRequest.newBuilder()
-                  .header("Content-Type", "application/x-www-form-urlencoded")
-                  .uri(
-                      UriComponentsBuilder.newInstance()
-                          .scheme("https")
-                          .host("accounts.spotify.com")
-                          .path("api/token")
-                          .build()
-                          .toUri())
-                  .POST(
-                      HttpRequest.BodyPublishers.ofString(
-                          String.format(
-                              "grant_type=client_credentials&client_id=%s&client_secret=%s",
-                              CLIENT_ID, CLIENT_SECRET)))
-                  .build(),
-              HttpResponse.BodyHandlers.ofString());
-      return objectMapper.readValue(response.body(), Token.class).getAccessToken();
+      return objectMapper
+          .readValue(
+              client
+                  .send(
+                      HttpRequest.newBuilder()
+                          .header("Content-Type", "application/x-www-form-urlencoded")
+                          .uri(
+                              UriComponentsBuilder.newInstance()
+                                  .scheme("https")
+                                  .host("accounts.spotify.com")
+                                  .path("api/token")
+                                  .build()
+                                  .toUri())
+                          .POST(
+                              HttpRequest.BodyPublishers.ofString(
+                                  String.format(
+                                      "grant_type=client_credentials&client_id=%s&client_secret=%s",
+                                      CLIENT_ID, CLIENT_SECRET)))
+                          .build(),
+                      HttpResponse.BodyHandlers.ofString())
+                  .body(),
+              Token.class)
+          .getAccessToken();
     }
   }
 }
