@@ -3,7 +3,6 @@ package com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.annotation.Nullable;
-import java.net.URI;
 import java.net.URL;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -11,124 +10,88 @@ import org.immutables.value.Value;
 
 @Value.Immutable
 @JsonDeserialize(as = ImmutablePlaylist.class)
-public abstract class Playlist {
+public interface Playlist extends Metadata {
   @JsonProperty("description")
-  public abstract String getDescription();
+  String getDescription();
 
   @JsonProperty("name")
-  public abstract String getName();
-
-  @JsonProperty("href")
-  public abstract URL getHref();
-
-  @JsonProperty("id")
-  public abstract String getId();
+  String getName();
 
   @JsonProperty("tracks")
-  public abstract Tracks getTracks();
-
-  @JsonProperty("uri")
-  public abstract URI getUri();
+  Tracks getTracks();
 
   @Value.Immutable
   @JsonDeserialize(as = ImmutableTracks.class)
-  public abstract static class Tracks {
+  interface Tracks {
     @JsonProperty("href")
-    public abstract URL getHref();
+    URL getHref();
 
     @JsonProperty("limit")
-    public abstract int getLimit();
+    int getLimit();
 
     @JsonProperty("next")
     @Nullable
-    public abstract URL getNext();
+    URL getNext();
 
     @JsonProperty("offset")
-    public abstract int getOffset();
+    int getOffset();
 
     @JsonProperty("previous")
     @Nullable
-    public abstract URL getPrevious();
+    URL getPrevious();
 
     @JsonProperty("total")
-    public abstract int getTotal();
+    int getTotal();
 
     @JsonProperty("items")
-    public abstract List<TrackItem> getTrackItems();
+    List<TrackItem> getTrackItems();
   }
 
   @Value.Immutable
   @JsonDeserialize(as = ImmutableTrackItem.class)
-  public abstract static class TrackItem {
+  interface TrackItem {
     @JsonProperty("added_at")
-    public abstract ZonedDateTime getAddedAt();
+    ZonedDateTime getAddedAt();
 
     @JsonProperty("track")
-    public abstract TrackObject getTrackObject();
+    TrackObject getTrackObject();
   }
 
   @Value.Immutable
   @JsonDeserialize(as = ImmutableTrackObject.class)
-  public abstract static class TrackObject {
+  interface TrackObject extends Metadata {
     @JsonProperty("album")
-    public abstract TrackAlbum getAlbum();
+    TrackAlbum getAlbum();
 
     @JsonProperty("artists")
-    public abstract List<TrackArtist> getArtists();
+    List<TrackArtist> getArtists();
 
     @JsonProperty("duration_ms")
-    public abstract int getDuration();
-
-    @JsonProperty("href")
-    public abstract URL getHref();
-
-    @JsonProperty("id")
-    public abstract String getId();
+    int getDuration();
 
     @JsonProperty("name")
-    public abstract String getName();
-
-    @JsonProperty("uri")
-    public abstract URI getUri();
+    String getName();
   }
 
   @Value.Immutable
   @JsonDeserialize(as = ImmutableTrackAlbum.class)
-  public abstract static class TrackAlbum {
-    @JsonProperty("href")
-    public abstract URL getHref();
-
-    @JsonProperty("id")
-    public abstract String getId();
-
+  interface TrackAlbum extends Metadata {
     @JsonProperty("name")
-    public abstract String getName();
+    String getName();
 
     @JsonProperty("release_date")
-    public abstract String getReleaseDate();
+    String getReleaseDate();
 
     // TODO add release_date_precision?
-
-    @JsonProperty("uri")
-    public abstract URI getUri();
   }
 
   @Value.Immutable
   @JsonDeserialize(as = ImmutableTrackArtist.class)
-  public abstract static class TrackArtist {
+  interface TrackArtist extends Metadata {
     @JsonProperty("genres")
-    public abstract List<String> getGenres();
-
-    @JsonProperty("href")
-    public abstract URL getHref();
-
-    @JsonProperty("id")
-    public abstract String getId();
+    List<String> getGenres();
 
     @JsonProperty("name")
-    public abstract String getName();
-
-    @JsonProperty("uri")
-    public abstract URI getUri();
+    String getName();
   }
 }

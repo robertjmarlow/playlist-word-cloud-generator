@@ -6,13 +6,13 @@ import org.immutables.value.Value;
 
 @Value.Immutable
 @JsonDeserialize(as = ImmutableToken.class)
-public abstract class Token {
+public interface Token {
   @JsonProperty("access_token")
-  public abstract String getAccessToken();
+  String getAccessToken();
 
   @JsonProperty("token_type")
-  public abstract String getTokenType();
+  String getTokenType();
 
   @JsonProperty("expires_in")
-  public abstract long getExpiresIn();
+  long getExpiresIn();
 }
