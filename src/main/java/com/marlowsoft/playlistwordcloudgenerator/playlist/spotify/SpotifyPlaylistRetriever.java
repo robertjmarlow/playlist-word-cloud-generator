@@ -1,8 +1,8 @@
 package com.marlowsoft.playlistwordcloudgenerator.playlist.spotify;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.PlaylistRetriever;
-import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.ImmutablePlaylist;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Playlist;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Token;
 import java.io.IOException;
@@ -42,8 +42,6 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
 
   @Override
   public Playlist getPlaylist(String identifier) throws IOException, InterruptedException {
-    final ImmutablePlaylist.Builder playlistBuilder = ImmutablePlaylist.builder();
-
     try (final HttpClient client = HttpClient.newBuilder().build()) {
       final UriComponents uriComponents =
           UriComponentsBuilder.newInstance()
@@ -60,10 +58,11 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
       final HttpResponse<String> response =
           client.send(request, HttpResponse.BodyHandlers.ofString());
       LOGGER.info("i got this back from Spotify: {}", response.body());
-      playlistBuilder.name("lol hardcoded");
-    }
 
-    return playlistBuilder.build();
+      final ObjectMapper objectMapper = new ObjectMapper();
+      objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+      return objectMapper.readValue(response.body(), Playlist.class);
+    }
   }
 
   private String getOauthToken() throws IOException, InterruptedException {
