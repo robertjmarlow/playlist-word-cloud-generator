@@ -18,6 +18,9 @@ public abstract class Playlist {
   @JsonProperty("name")
   public abstract String getName();
 
+  @JsonProperty("href")
+  public abstract URL getHref();
+
   @JsonProperty("id")
   public abstract String getId();
 
