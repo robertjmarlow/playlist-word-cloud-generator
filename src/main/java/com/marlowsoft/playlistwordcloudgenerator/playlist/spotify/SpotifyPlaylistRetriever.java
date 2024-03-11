@@ -1,6 +1,5 @@
 package com.marlowsoft.playlistwordcloudgenerator.playlist.spotify;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.PlaylistRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Playlist;
@@ -12,6 +11,7 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -40,32 +40,39 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
     }
   }
 
+  private final ObjectMapper objectMapper;
+
+  @Autowired
+  SpotifyPlaylistRetriever(ObjectMapper objectMapper) {
+    this.objectMapper = objectMapper;
+  }
+
   @Override
   public Playlist getPlaylist(String identifier) throws IOException, InterruptedException {
+    // TODO inject this builder instead of hardcoding the "real" one
     try (final HttpClient client = HttpClient.newBuilder().build()) {
-      final UriComponents uriComponents =
-          UriComponentsBuilder.newInstance()
-              .scheme("https")
-              .host("api.spotify.com")
-              .path("v1/playlists/{playlist-id}")
-              .buildAndExpand(identifier);
-      final HttpRequest request =
-          HttpRequest.newBuilder()
-              .header("Authorization", String.format("Bearer %s", getOauthToken()))
-              .uri(uriComponents.toUri())
-              .GET()
-              .build();
       final HttpResponse<String> response =
-          client.send(request, HttpResponse.BodyHandlers.ofString());
+          client.send(
+              HttpRequest.newBuilder()
+                  .header("Authorization", String.format("Bearer %s", getOauthToken()))
+                  .uri(
+                      UriComponentsBuilder.newInstance()
+                          .scheme("https")
+                          .host("api.spotify.com")
+                          .path("v1/playlists/{playlist-id}")
+                          .buildAndExpand(identifier)
+                          .toUri())
+                  .GET()
+                  .build(),
+              HttpResponse.BodyHandlers.ofString());
       LOGGER.info("i got this back from Spotify: {}", response.body());
 
-      final ObjectMapper objectMapper = new ObjectMapper();
-      objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       return objectMapper.readValue(response.body(), Playlist.class);
     }
   }
 
   private String getOauthToken() throws IOException, InterruptedException {
+    // TODO inject this builder instead of hardcoding the "real" one
     try (final HttpClient client = HttpClient.newBuilder().build()) {
       final UriComponents uriComponents =
           UriComponentsBuilder.newInstance()
@@ -73,6 +80,7 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
               .host("accounts.spotify.com")
               .path("api/token")
               .build();
+      // TODO does Spring have a way to get oauth tokens?
       final HttpRequest request =
           HttpRequest.newBuilder()
               .header("Content-Type", "application/x-www-form-urlencoded")
@@ -85,7 +93,7 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
               .build();
       final HttpResponse<String> response =
           client.send(request, HttpResponse.BodyHandlers.ofString());
-      final Token token = new ObjectMapper().readValue(response.body(), Token.class);
+      final Token token = objectMapper.readValue(response.body(), Token.class);
       return token.getAccessToken();
     }
   }
