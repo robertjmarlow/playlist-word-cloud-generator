@@ -13,7 +13,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Component
@@ -65,8 +64,6 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
                   .GET()
                   .build(),
               HttpResponse.BodyHandlers.ofString());
-      LOGGER.info("i got this back from Spotify: {}", response.body());
-
       return objectMapper.readValue(response.body(), Playlist.class);
     }
   }
@@ -74,27 +71,25 @@ public class SpotifyPlaylistRetriever implements PlaylistRetriever<Playlist, Str
   private String getOauthToken() throws IOException, InterruptedException {
     // TODO inject this builder instead of hardcoding the "real" one
     try (final HttpClient client = HttpClient.newBuilder().build()) {
-      final UriComponents uriComponents =
-          UriComponentsBuilder.newInstance()
-              .scheme("https")
-              .host("accounts.spotify.com")
-              .path("api/token")
-              .build();
-      // TODO does Spring have a way to get oauth tokens?
-      final HttpRequest request =
-          HttpRequest.newBuilder()
-              .header("Content-Type", "application/x-www-form-urlencoded")
-              .uri(uriComponents.toUri())
-              .POST(
-                  HttpRequest.BodyPublishers.ofString(
-                      String.format(
-                          "grant_type=client_credentials&client_id=%s&client_secret=%s",
-                          CLIENT_ID, CLIENT_SECRET)))
-              .build();
       final HttpResponse<String> response =
-          client.send(request, HttpResponse.BodyHandlers.ofString());
-      final Token token = objectMapper.readValue(response.body(), Token.class);
-      return token.getAccessToken();
+          client.send(
+              HttpRequest.newBuilder()
+                  .header("Content-Type", "application/x-www-form-urlencoded")
+                  .uri(
+                      UriComponentsBuilder.newInstance()
+                          .scheme("https")
+                          .host("accounts.spotify.com")
+                          .path("api/token")
+                          .build()
+                          .toUri())
+                  .POST(
+                      HttpRequest.BodyPublishers.ofString(
+                          String.format(
+                              "grant_type=client_credentials&client_id=%s&client_secret=%s",
+                              CLIENT_ID, CLIENT_SECRET)))
+                  .build(),
+              HttpResponse.BodyHandlers.ofString());
+      return objectMapper.readValue(response.body(), Token.class).getAccessToken();
     }
   }
 }
