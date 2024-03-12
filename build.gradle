@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '3.2.3'
 	id 'io.spring.dependency-management' version '1.1.4'
 	id 'com.diffplug.spotless' version '6.25.0'
+	id 'jacoco'
 }
 
 group = 'com.marlowsoft'
@@ -37,4 +38,12 @@ spotless {
 	java {
 		googleJavaFormat()
 	}
+}
+
+test {
+	finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+	dependsOn test // tests are required to run before generating the report
 }
