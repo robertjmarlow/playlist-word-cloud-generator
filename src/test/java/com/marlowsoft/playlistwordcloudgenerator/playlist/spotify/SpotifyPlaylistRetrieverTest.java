@@ -1,7 +1,6 @@
 package com.marlowsoft.playlistwordcloudgenerator.playlist.spotify;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -43,7 +42,38 @@ public class SpotifyPlaylistRetrieverTest {
   }
 
   @Test
-  void getPlaylistSuccess() {}
+  void getPlaylistSuccess() throws IOException, InterruptedException {
+    when(httpClientBuilder.build()).thenReturn(httpClient);
+    when(httpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class)))
+        .thenReturn(httpResponse);
+    when(httpResponse.statusCode()).thenReturn(200);
+    when(httpResponse.body())
+        .thenReturn(
+            Resources.toString(Resources.getResource("spotify/token.json"), StandardCharsets.UTF_8),
+            Resources.toString(
+                Resources.getResource("spotify/successful-playlist-get.json"),
+                StandardCharsets.UTF_8));
+
+    final Playlist playlist = playlistRetriever.getPlaylist("2nvLifa8KgDyW0obRi79Gf");
+
+    assertEquals("Bah Gawd, thats _______ music!", playlist.getName());
+    assertEquals(11, playlist.getTracks().getTrackItems().size());
+    assertEquals(
+        "I'll Come Crashing",
+        playlist.getTracks().getTrackItems().get(4).getTrackObject().getName());
+    assertEquals(
+        "Pile", playlist.getTracks().getTrackItems().get(4).getTrackObject().getAlbum().getName());
+    assertEquals(
+        "A Giant Dog",
+        playlist
+            .getTracks()
+            .getTrackItems()
+            .get(4)
+            .getTrackObject()
+            .getArtists()
+            .getFirst()
+            .getName());
+  }
 
   @Test
   void failGettingOauthToken() throws IOException, InterruptedException {

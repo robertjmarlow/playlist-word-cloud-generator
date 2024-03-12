@@ -28,7 +28,7 @@ public class PlaylistWordCloudGeneratorApplication {
 
       @Override
       public void run(String... args) throws Exception {
-        final Playlist playlist = playlistRetriever.getPlaylist("2nvLifa8KgDyW0obRi79Gf");
+        final Playlist playlist = playlistRetriever.getPlaylist("4H9YsKpBfjbnmOlyZIIlgy");
 
         LOGGER.info("i got this playlist back: {}", playlist);
 
