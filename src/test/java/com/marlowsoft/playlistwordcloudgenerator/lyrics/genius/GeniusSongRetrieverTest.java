@@ -1,6 +1,7 @@
 package com.marlowsoft.playlistwordcloudgenerator.lyrics.genius;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -98,5 +99,47 @@ public class GeniusSongRetrieverTest {
   }
 
   @Test
-  void getSongsMostlySuccess() throws IOException, InterruptedException {}
+  void getSongsMostlySuccess() throws IOException, InterruptedException {
+    when(httpClientBuilder.build()).thenReturn(httpClient);
+    when(httpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class)))
+        .thenReturn(httpResponse);
+    when(httpResponse.statusCode()).thenReturn(200, 404, 200);
+    when(httpResponse.body())
+        .thenReturn(
+            Resources.toString(
+                Resources.getResource("genius/ghost-of-perdition.json"), StandardCharsets.UTF_8),
+            Resources.toString(Resources.getResource("genius/404.json"), StandardCharsets.UTF_8),
+            Resources.toString(
+                Resources.getResource("genius/the-world-breathes-with-me.json"),
+                StandardCharsets.UTF_8));
+
+    final long songId1 = 1015520; // Ghost of Perdition
+    final long songId2 = 0; // doesn't exist :(
+    final long songId3 = 9715712; // The World Breathes with Me
+    final List<Long> songIds = Arrays.asList(songId1, songId2, songId3);
+    final List<Long> validSongIds = Arrays.asList(songId1, songId3);
+
+    final SongReply songReply =
+        geniusSongRetriever.get(ImmutableSongRequest.builder().songIds(songIds).build());
+
+    assertTrue(songReply.getSongReplies().keySet().containsAll(validSongIds));
+    assertFalse(songReply.getSongReplies().containsKey(songId2));
+
+    final GeniusSongReply.Song song1 =
+        songReply.getSongReplies().get(songId1).getResponse().getSong();
+    final GeniusSongReply.Song song3 =
+        songReply.getSongReplies().get(songId3).getResponse().getSong();
+
+    assertEquals("Opeth", song1.getArtistNames());
+    assertEquals("Ghost of Perdition", song1.getTitle());
+    assertEquals(songId1, song1.getId());
+    assertEquals(
+        URI.create("https://genius.com/Opeth-ghost-of-perdition-lyrics").toURL(), song1.getUrl());
+    assertEquals("Caligula's Horse", song3.getArtistNames());
+    assertEquals("The World Breathes with Me", song3.getTitle());
+    assertEquals(songId3, song3.getId());
+    assertEquals(
+        URI.create("https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics").toURL(),
+        song3.getUrl());
+  }
 }
