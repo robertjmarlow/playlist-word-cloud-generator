@@ -1,0 +1,758 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "response": {
+    "song": {
+      "annotation_count": 22,
+      "api_path": "/songs/1015520",
+      "apple_music_id": "214473109",
+      "apple_music_player_url": "https://genius.com/songs/1015520/apple_music_player",
+      "artist_names": "Opeth",
+      "description": {
+        "dom": {
+          "tag": "root",
+          "children": [
+            {
+              "tag": "p",
+              "children": [
+                "Ghost of Perdition is the opening track for Opeth’s eight studio album, Ghost Reveries."
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                "Ghost Reveries was initially intended to be a ",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://en.wikipedia.org/wiki/Concept_album",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": [
+                    "concept album"
+                  ]
+                },
+                " that told the tale of a man’s emotional distress following a heinous crime (the murder of his own mother, however was changed prior to release)."
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                "Some of the lyrical and artistic themes remain, however not in any fashion that tells a complete story (as seen in their previous albums Still Life and My Arms, Your Hearse)."
+              ]
+            },
+            "",
+            {
+              "tag": "p",
+              "children": [
+                "The state of perdition is where one is in a stage of eternal suffering and damnation (",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "http://i.onionstatic.com/avclub/3464/38/16x9/960.jpg",
+                    "rel": "noopener nofollow"
+                  },
+                  "children": [
+                    "which could be kind of cool"
+                  ]
+                },
+                "), banished to hell."
+              ]
+            }
+          ]
+        }
+      },
+      "embed_content": "<div id='rg_embed_link_1015520' class='rg_embed_link' data-song-id='1015520'>Read <a href='https://genius.com/Opeth-ghost-of-perdition-lyrics'>“Ghost of Perdition” by Opeth</a> on Genius</div> <script crossorigin src='//genius.com/songs/1015520/embed.js'></script>",
+      "featured_video": false,
+      "full_title": "Ghost of Perdition by Opeth",
+      "header_image_thumbnail_url": "https://images.genius.com/5847a1f1d6986f12b1cb5a76e19a0a9a.300x300x1.jpg",
+      "header_image_url": "https://images.genius.com/5847a1f1d6986f12b1cb5a76e19a0a9a.1000x1000x1.jpg",
+      "id": 1015520,
+      "language": "en",
+      "lyrics_owner_id": 789451,
+      "lyrics_placeholder_reason": null,
+      "lyrics_state": "complete",
+      "path": "/Opeth-ghost-of-perdition-lyrics",
+      "pyongs_count": 16,
+      "recording_location": null,
+      "relationships_index_url": "https://genius.com/Opeth-ghost-of-perdition-sample",
+      "release_date": "2005-07-29",
+      "release_date_for_display": "July 29, 2005",
+      "release_date_with_abbreviated_month_for_display": "Jul. 29, 2005",
+      "song_art_image_thumbnail_url": "https://images.genius.com/5847a1f1d6986f12b1cb5a76e19a0a9a.300x300x1.jpg",
+      "song_art_image_url": "https://images.genius.com/5847a1f1d6986f12b1cb5a76e19a0a9a.1000x1000x1.jpg",
+      "stats": {
+        "accepted_annotations": 5,
+        "contributors": 29,
+        "iq_earners": 26,
+        "transcribers": 3,
+        "unreviewed_annotations": 16,
+        "verified_annotations": 0,
+        "hot": false,
+        "pageviews": 63105
+      },
+      "title": "Ghost of Perdition",
+      "title_with_featured": "Ghost of Perdition",
+      "url": "https://genius.com/Opeth-ghost-of-perdition-lyrics",
+      "current_user_metadata": {
+        "permissions": [
+          "see_pageviews",
+          "view_apple_music_player",
+          "view_recommendations",
+          "view_song_story_gallery"
+        ],
+        "excluded_permissions": [
+          "follow",
+          "award_transcription_iq",
+          "remove_transcription_iq",
+          "pyong",
+          "edit_lyrics",
+          "view_annotation_engagement_data",
+          "publish",
+          "unpublish",
+          "edit_spotify_details",
+          "hide",
+          "unhide",
+          "toggle_featured_video",
+          "add_pinned_annotation_to",
+          "add_community_annotation_to",
+          "destroy",
+          "mark_as_not_spam",
+          "edit_spotify_annotations_for",
+          "verify_lyrics",
+          "unverify_lyrics",
+          "edit_anything",
+          "edit_any_media",
+          "edit",
+          "rename",
+          "edit_tags",
+          "reindex",
+          "view_lyrics_synchronization",
+          "enable_media",
+          "disable_media",
+          "edit_lyrics_or_annotation_brackets",
+          "see_editorial_indicators",
+          "view_attribution_visualization",
+          "edit_annotation_brackets",
+          "preview_lyrics_for_export",
+          "hide_apple_player",
+          "unhide_apple_player",
+          "trigger_apple_match",
+          "mark_lyrics_evaluation_as_complete",
+          "mark_lyrics_evaluation_as_staff_approved",
+          "unmark_lyrics_evaluation_as_complete",
+          "mark_lyrics_evaluation_as_un_staff_approved",
+          "view_transcriber_media_player",
+          "override_apple_match",
+          "set_song_color_gradient",
+          "mark_as_hot",
+          "unmark_as_hot",
+          "view_relationships_page",
+          "use_mark_complete_button",
+          "edit_youtube_url",
+          "edit_soundcloud_url",
+          "edit_spotify_uuid",
+          "edit_vevo_url",
+          "create_comment",
+          "moderate_annotations",
+          "create_annotation",
+          "see_short_id",
+          "manage_chart_item",
+          "create_tag",
+          "propose_lyrics_edit",
+          "view_lyrics_edit_proposals_on_song",
+          "create_question",
+          "answer_question_with_source",
+          "add_qa",
+          "pin_qa",
+          "view_stubhub_category"
+        ],
+        "interactions": {
+          "pyong": false,
+          "following": false
+        },
+        "relationships": {},
+        "iq_by_action": {}
+      },
+      "album": {
+        "api_path": "/albums/156571",
+        "cover_art_url": "https://images.genius.com/4d80d5082ba0bcdd2d1633e87acc2ceb.1000x1000x1.jpg",
+        "full_title": "Ghost Reveries by Opeth",
+        "id": 156571,
+        "name": "Ghost Reveries",
+        "release_date_for_display": "August 29, 2005",
+        "url": "https://genius.com/albums/Opeth/Ghost-reveries",
+        "artist": {
+          "api_path": "/artists/59420",
+          "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+          "id": 59420,
+          "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Opeth",
+          "url": "https://genius.com/artists/Opeth"
+        }
+      },
+      "custom_performances": [
+        {
+          "label": "Composer",
+          "artists": [
+            {
+              "api_path": "/artists/114382",
+              "header_image_url": "https://images.genius.com/1f9d0d743a83d3f720c78be84798e7b9.1000x1000x1.png",
+              "id": 114382,
+              "image_url": "https://images.genius.com/23408c639f3d8fcaf7719429e63cff7a.400x400x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Mikael Åkerfeldt",
+              "url": "https://genius.com/artists/Mikael-akerfeldt"
+            }
+          ]
+        },
+        {
+          "label": "Lyricist",
+          "artists": [
+            {
+              "api_path": "/artists/114382",
+              "header_image_url": "https://images.genius.com/1f9d0d743a83d3f720c78be84798e7b9.1000x1000x1.png",
+              "id": 114382,
+              "image_url": "https://images.genius.com/23408c639f3d8fcaf7719429e63cff7a.400x400x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Mikael Åkerfeldt",
+              "url": "https://genius.com/artists/Mikael-akerfeldt"
+            }
+          ]
+        },
+        {
+          "label": "Vocals",
+          "artists": [
+            {
+              "api_path": "/artists/114382",
+              "header_image_url": "https://images.genius.com/1f9d0d743a83d3f720c78be84798e7b9.1000x1000x1.png",
+              "id": 114382,
+              "image_url": "https://images.genius.com/23408c639f3d8fcaf7719429e63cff7a.400x400x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Mikael Åkerfeldt",
+              "url": "https://genius.com/artists/Mikael-akerfeldt"
+            }
+          ]
+        },
+        {
+          "label": "Guitars",
+          "artists": [
+            {
+              "api_path": "/artists/995262",
+              "header_image_url": "https://images.genius.com/cef86c896d0f362f0fdc47427bec2d8e.533x533x1.jpg",
+              "id": 995262,
+              "image_url": "https://images.genius.com/cef86c896d0f362f0fdc47427bec2d8e.533x533x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Peter Lindgren",
+              "url": "https://genius.com/artists/Peter-lindgren"
+            },
+            {
+              "api_path": "/artists/114382",
+              "header_image_url": "https://images.genius.com/1f9d0d743a83d3f720c78be84798e7b9.1000x1000x1.png",
+              "id": 114382,
+              "image_url": "https://images.genius.com/23408c639f3d8fcaf7719429e63cff7a.400x400x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Mikael Åkerfeldt",
+              "url": "https://genius.com/artists/Mikael-akerfeldt"
+            }
+          ]
+        },
+        {
+          "label": "Keyboards",
+          "artists": [
+            {
+              "api_path": "/artists/1186305",
+              "header_image_url": "https://images.genius.com/c4bb47e3a3cdca5e45d78d87983eac2b.464x464x1.jpg",
+              "id": 1186305,
+              "image_url": "https://images.genius.com/c4bb47e3a3cdca5e45d78d87983eac2b.464x464x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Per Wiberg",
+              "url": "https://genius.com/artists/Per-wiberg"
+            }
+          ]
+        },
+        {
+          "label": "Bass",
+          "artists": [
+            {
+              "api_path": "/artists/1107818",
+              "header_image_url": "https://images.genius.com/0e7726014ed4e8894b176568723fcb6d.1000x1000x1.jpg",
+              "id": 1107818,
+              "image_url": "https://images.genius.com/0e7726014ed4e8894b176568723fcb6d.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Martin Mendez",
+              "url": "https://genius.com/artists/Martin-mendez"
+            }
+          ]
+        },
+        {
+          "label": "Drums",
+          "artists": [
+            {
+              "api_path": "/artists/531403",
+              "header_image_url": "https://images.genius.com/bfaddd13e3d445e11f6888b17c279ce5.273x273x1.jpg",
+              "id": 531403,
+              "image_url": "https://images.genius.com/bfaddd13e3d445e11f6888b17c279ce5.273x273x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Martin Lopez",
+              "url": "https://genius.com/artists/Martin-lopez"
+            }
+          ]
+        },
+        {
+          "label": "Recording Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/224747",
+              "header_image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "id": 224747,
+              "image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jens Bogren",
+              "url": "https://genius.com/artists/Jens-bogren"
+            },
+            {
+              "api_path": "/artists/59420",
+              "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "id": 59420,
+              "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Opeth",
+              "url": "https://genius.com/artists/Opeth"
+            },
+            {
+              "api_path": "/artists/1044374",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1044374,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Rickard Bengtsson",
+              "url": "https://genius.com/artists/Rickard-bengtsson"
+            },
+            {
+              "api_path": "/artists/3630556",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3630556,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Anders Alexandersson",
+              "url": "https://genius.com/artists/Anders-alexandersson"
+            },
+            {
+              "api_path": "/artists/2691711",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 2691711,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Niklas Källgren",
+              "url": "https://genius.com/artists/Niklas-kallgren"
+            }
+          ]
+        },
+        {
+          "label": "Mixing Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/224747",
+              "header_image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "id": 224747,
+              "image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jens Bogren",
+              "url": "https://genius.com/artists/Jens-bogren"
+            },
+            {
+              "api_path": "/artists/59420",
+              "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "id": 59420,
+              "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Opeth",
+              "url": "https://genius.com/artists/Opeth"
+            }
+          ]
+        },
+        {
+          "label": "Mastering Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/1101548",
+              "header_image_url": "https://images.genius.com/9c1659d8a58e63a214ca9cd940efe42f.373x373x1.jpg",
+              "id": 1101548,
+              "image_url": "https://images.genius.com/9c1659d8a58e63a214ca9cd940efe42f.373x373x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Thomas Eberger",
+              "url": "https://genius.com/artists/Thomas-eberger"
+            },
+            {
+              "api_path": "/artists/224747",
+              "header_image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "id": 224747,
+              "image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jens Bogren",
+              "url": "https://genius.com/artists/Jens-bogren"
+            },
+            {
+              "api_path": "/artists/59420",
+              "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "id": 59420,
+              "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Opeth",
+              "url": "https://genius.com/artists/Opeth"
+            }
+          ]
+        },
+        {
+          "label": "Label",
+          "artists": [
+            {
+              "api_path": "/artists/290010",
+              "header_image_url": "https://images.genius.com/760e8e6b6203bd9a77136d200b0fe356.1000x563x1.jpg",
+              "id": 290010,
+              "image_url": "https://images.genius.com/a32421a228d5a92e62055693f8559d30.500x500x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Roadrunner Records",
+              "url": "https://genius.com/artists/Roadrunner-records"
+            }
+          ]
+        }
+      ],
+      "description_annotation": {
+        "_type": "referent",
+        "annotator_id": 2724641,
+        "annotator_login": "prometheal",
+        "api_path": "/referents/5512277",
+        "classification": "accepted",
+        "fragment": "Ghost of Perdition",
+        "id": 5512277,
+        "is_description": true,
+        "path": "/5512277/Opeth-ghost-of-perdition/Ghost-of-perdition",
+        "range": {
+          "content": "Ghost of Perdition"
+        },
+        "song_id": 1015520,
+        "url": "https://genius.com/5512277/Opeth-ghost-of-perdition/Ghost-of-perdition",
+        "verified_annotator_ids": [],
+        "annotatable": {
+          "api_path": "/songs/1015520",
+          "client_timestamps": {
+            "updated_by_human_at": 1701103013,
+            "lyrics_updated_at": 1701103013
+          },
+          "context": "Opeth",
+          "id": 1015520,
+          "image_url": "https://images.genius.com/5847a1f1d6986f12b1cb5a76e19a0a9a.1000x1000x1.jpg",
+          "link_title": "Ghost of Perdition by Opeth",
+          "title": "Ghost of Perdition",
+          "type": "Song",
+          "url": "https://genius.com/Opeth-ghost-of-perdition-lyrics"
+        },
+        "annotations": [
+          {
+            "api_path": "/annotations/5512277",
+            "body": {
+              "dom": {
+                "tag": "root",
+                "children": [
+                  {
+                    "tag": "p",
+                    "children": [
+                      "Ghost of Perdition is the opening track for Opeth’s eight studio album, Ghost Reveries."
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      "Ghost Reveries was initially intended to be a ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://en.wikipedia.org/wiki/Concept_album",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": [
+                          "concept album"
+                        ]
+                      },
+                      " that told the tale of a man’s emotional distress following a heinous crime (the murder of his own mother, however was changed prior to release)."
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      "Some of the lyrical and artistic themes remain, however not in any fashion that tells a complete story (as seen in their previous albums Still Life and My Arms, Your Hearse)."
+                    ]
+                  },
+                  "",
+                  {
+                    "tag": "p",
+                    "children": [
+                      "The state of perdition is where one is in a stage of eternal suffering and damnation (",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "http://i.onionstatic.com/avclub/3464/38/16x9/960.jpg",
+                          "rel": "noopener nofollow"
+                        },
+                        "children": [
+                          "which could be kind of cool"
+                        ]
+                      },
+                      "), banished to hell."
+                    ]
+                  }
+                ]
+              }
+            },
+            "comment_count": 1,
+            "community": true,
+            "custom_preview": null,
+            "has_voters": true,
+            "id": 5512277,
+            "pinned": false,
+            "share_url": "https://genius.com/5512277",
+            "source": null,
+            "state": "accepted",
+            "url": "https://genius.com/5512277/Opeth-ghost-of-perdition/Ghost-of-perdition",
+            "verified": false,
+            "votes_total": 73,
+            "current_user_metadata": {
+              "permissions": [],
+              "excluded_permissions": [
+                "vote",
+                "edit",
+                "cosign",
+                "uncosign",
+                "destroy",
+                "accept",
+                "reject",
+                "see_unreviewed",
+                "clear_votes",
+                "propose_edit_to",
+                "pin_to_profile",
+                "unpin_from_profile",
+                "update_source",
+                "edit_custom_preview",
+                "create_comment"
+              ],
+              "interactions": {
+                "cosign": false,
+                "pyong": false,
+                "vote": null
+              },
+              "iq_by_action": {}
+            },
+            "authors": [
+              {
+                "attribution": 1.0,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/2724641",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://assets.genius.com/images/default_avatar_16.png?1710258053",
+                      "bounding_box": {
+                        "width": 16,
+                        "height": 16
+                      }
+                    },
+                    "thumb": {
+                      "url": "https://assets.genius.com/images/default_avatar_32.png?1710258053",
+                      "bounding_box": {
+                        "width": 32,
+                        "height": 32
+                      }
+                    },
+                    "small": {
+                      "url": "https://assets.genius.com/images/default_avatar_100.png?1710258053",
+                      "bounding_box": {
+                        "width": 100,
+                        "height": 100
+                      }
+                    },
+                    "medium": {
+                      "url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+                      "bounding_box": {
+                        "width": 300,
+                        "height": 400
+                      }
+                    }
+                  },
+                  "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+                  "human_readable_role_for_display": "Contributor",
+                  "id": 2724641,
+                  "iq": 1139,
+                  "login": "prometheal",
+                  "name": "prometheal",
+                  "role_for_display": "contributor",
+                  "url": "https://genius.com/prometheal",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": [
+                      "follow"
+                    ],
+                    "interactions": {
+                      "following": false
+                    }
+                  }
+                }
+              }
+            ],
+            "cosigned_by": [],
+            "rejection_comment": null,
+            "verified_by": null
+          }
+        ]
+      },
+      "featured_artists": [],
+      "lyrics_marked_complete_by": null,
+      "lyrics_marked_staff_approved_by": null,
+      "media": [
+        {
+          "provider": "youtube",
+          "start": 0,
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=MDBykpSXsSE"
+        }
+      ],
+      "primary_artist": {
+        "api_path": "/artists/59420",
+        "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+        "id": 59420,
+        "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+        "is_meme_verified": false,
+        "is_verified": false,
+        "name": "Opeth",
+        "url": "https://genius.com/artists/Opeth"
+      },
+      "producer_artists": [
+        {
+          "api_path": "/artists/224747",
+          "header_image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+          "id": 224747,
+          "image_url": "https://images.genius.com/44608fba2425214551bb46f8eef25a9b.720x720x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Jens Bogren",
+          "url": "https://genius.com/artists/Jens-bogren"
+        },
+        {
+          "api_path": "/artists/59420",
+          "header_image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+          "id": 59420,
+          "image_url": "https://images.genius.com/8b4f52d1ecc384d81d2da6648f18ae28.450x450x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Opeth",
+          "url": "https://genius.com/artists/Opeth"
+        }
+      ],
+      "song_relationships": [
+        {
+          "relationship_type": "samples",
+          "type": "samples",
+          "songs": []
+        },
+        {
+          "relationship_type": "sampled_in",
+          "type": "sampled_in",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolates",
+          "type": "interpolates",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolated_by",
+          "type": "interpolated_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "cover_of",
+          "type": "cover_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "covered_by",
+          "type": "covered_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "remix_of",
+          "type": "remix_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "remixed_by",
+          "type": "remixed_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "live_version_of",
+          "type": "live_version_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "performed_live_as",
+          "type": "performed_live_as",
+          "songs": []
+        },
+        {
+          "relationship_type": "translation_of",
+          "type": "translation_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "translations",
+          "type": "translations",
+          "songs": []
+        }
+      ],
+      "translation_songs": [],
+      "verified_annotations_by": [],
+      "verified_contributors": [],
+      "verified_lyrics_by": [],
+      "writer_artists": [
+        {
+          "api_path": "/artists/114382",
+          "header_image_url": "https://images.genius.com/1f9d0d743a83d3f720c78be84798e7b9.1000x1000x1.png",
+          "id": 114382,
+          "image_url": "https://images.genius.com/23408c639f3d8fcaf7719429e63cff7a.400x400x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Mikael Åkerfeldt",
+          "url": "https://genius.com/artists/Mikael-akerfeldt"
+        }
+      ]
+    }
+  }
+}

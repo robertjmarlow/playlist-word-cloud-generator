@@ -1,0 +1,763 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "response": {
+    "song": {
+      "annotation_count": 0,
+      "api_path": "/songs/9715712",
+      "apple_music_id": "1712714862",
+      "apple_music_player_url": "https://genius.com/songs/9715712/apple_music_player",
+      "artist_names": "Caligula's Horse",
+      "description": {
+        "dom": {
+          "tag": "root",
+          "children": [
+            {
+              "tag": "p",
+              "children": [
+                "?"
+              ]
+            }
+          ]
+        }
+      },
+      "embed_content": "<div id='rg_embed_link_9715712' class='rg_embed_link' data-song-id='9715712'>Read <a href='https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics'>“The World Breathes with Me” by Caligula's Horse</a> on Genius</div> <script crossorigin src='//genius.com/songs/9715712/embed.js'></script>",
+      "featured_video": false,
+      "full_title": "The World Breathes with Me by Caligula's Horse",
+      "header_image_thumbnail_url": "https://images.genius.com/b6876fb666672d9d81017097d62a9f18.300x300x1.png",
+      "header_image_url": "https://images.genius.com/b6876fb666672d9d81017097d62a9f18.1000x1000x1.png",
+      "id": 9715712,
+      "language": "en",
+      "lyrics_owner_id": 18141428,
+      "lyrics_placeholder_reason": null,
+      "lyrics_state": "complete",
+      "path": "/Caligulas-horse-the-world-breathes-with-me-lyrics",
+      "pyongs_count": null,
+      "recording_location": "Q Sound and Machine Lab Studios",
+      "relationships_index_url": "https://genius.com/Caligulas-horse-the-world-breathes-with-me-sample",
+      "release_date": "2023-12-07",
+      "release_date_for_display": "December 7, 2023",
+      "release_date_with_abbreviated_month_for_display": "Dec. 7, 2023",
+      "song_art_image_thumbnail_url": "https://images.genius.com/c2b08f9479dbbbd288c4f05390dcf6a9.300x300x1.png",
+      "song_art_image_url": "https://images.genius.com/c2b08f9479dbbbd288c4f05390dcf6a9.1000x1000x1.png",
+      "stats": {
+        "accepted_annotations": 0,
+        "contributors": 2,
+        "iq_earners": 2,
+        "transcribers": 2,
+        "unreviewed_annotations": 0,
+        "verified_annotations": 0,
+        "hot": false,
+        "pageviews": 5138
+      },
+      "title": "The World Breathes with Me",
+      "title_with_featured": "The World Breathes with Me",
+      "url": "https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics",
+      "current_user_metadata": {
+        "permissions": [
+          "see_pageviews",
+          "view_apple_music_player",
+          "view_recommendations",
+          "view_song_story_gallery"
+        ],
+        "excluded_permissions": [
+          "follow",
+          "award_transcription_iq",
+          "remove_transcription_iq",
+          "pyong",
+          "edit_lyrics",
+          "view_annotation_engagement_data",
+          "publish",
+          "unpublish",
+          "edit_spotify_details",
+          "hide",
+          "unhide",
+          "toggle_featured_video",
+          "add_pinned_annotation_to",
+          "add_community_annotation_to",
+          "destroy",
+          "mark_as_not_spam",
+          "edit_spotify_annotations_for",
+          "verify_lyrics",
+          "unverify_lyrics",
+          "edit_anything",
+          "edit_any_media",
+          "edit",
+          "rename",
+          "edit_tags",
+          "reindex",
+          "view_lyrics_synchronization",
+          "enable_media",
+          "disable_media",
+          "edit_lyrics_or_annotation_brackets",
+          "see_editorial_indicators",
+          "view_attribution_visualization",
+          "edit_annotation_brackets",
+          "preview_lyrics_for_export",
+          "hide_apple_player",
+          "unhide_apple_player",
+          "trigger_apple_match",
+          "mark_lyrics_evaluation_as_complete",
+          "mark_lyrics_evaluation_as_staff_approved",
+          "unmark_lyrics_evaluation_as_complete",
+          "mark_lyrics_evaluation_as_un_staff_approved",
+          "view_transcriber_media_player",
+          "override_apple_match",
+          "set_song_color_gradient",
+          "mark_as_hot",
+          "unmark_as_hot",
+          "view_relationships_page",
+          "use_mark_complete_button",
+          "edit_youtube_url",
+          "edit_soundcloud_url",
+          "edit_spotify_uuid",
+          "edit_vevo_url",
+          "create_comment",
+          "moderate_annotations",
+          "create_annotation",
+          "see_short_id",
+          "manage_chart_item",
+          "create_tag",
+          "propose_lyrics_edit",
+          "view_lyrics_edit_proposals_on_song",
+          "create_question",
+          "answer_question_with_source",
+          "add_qa",
+          "pin_qa",
+          "view_stubhub_category"
+        ],
+        "interactions": {
+          "pyong": false,
+          "following": false
+        },
+        "relationships": {},
+        "iq_by_action": {}
+      },
+      "album": {
+        "api_path": "/albums/1104864",
+        "cover_art_url": "https://images.genius.com/bed421a446b3b031512ae0e2367f3768.1000x1000x1.png",
+        "full_title": "Charcoal Grace by Caligula's Horse",
+        "id": 1104864,
+        "name": "Charcoal Grace",
+        "release_date_for_display": "January 26, 2024",
+        "url": "https://genius.com/albums/Caligulas-horse/Charcoal-grace",
+        "artist": {
+          "api_path": "/artists/364764",
+          "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+          "id": 364764,
+          "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Caligula’s Horse",
+          "url": "https://genius.com/artists/Caligulas-horse"
+        }
+      },
+      "custom_performances": [
+        {
+          "label": "Violin",
+          "artists": [
+            {
+              "api_path": "/artists/3816431",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3816431,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Samuel Andrews",
+              "url": "https://genius.com/artists/Samuel-andrews"
+            }
+          ]
+        },
+        {
+          "label": "Clarinet",
+          "artists": [
+            {
+              "api_path": "/artists/3812613",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3812613,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sophie Willis",
+              "url": "https://genius.com/artists/Sophie-willis"
+            }
+          ]
+        },
+        {
+          "label": "Flute",
+          "artists": [
+            {
+              "api_path": "/artists/3812613",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3812613,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sophie Willis",
+              "url": "https://genius.com/artists/Sophie-willis"
+            }
+          ]
+        },
+        {
+          "label": "Cello",
+          "artists": [
+            {
+              "api_path": "/artists/3816430",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3816430,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Kate Derepas",
+              "url": "https://genius.com/artists/Kate-derepas"
+            }
+          ]
+        },
+        {
+          "label": "Additional Arranging",
+          "artists": [
+            {
+              "api_path": "/artists/3812613",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 3812613,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sophie Willis",
+              "url": "https://genius.com/artists/Sophie-willis"
+            }
+          ]
+        },
+        {
+          "label": "Additional Engineering",
+          "artists": [
+            {
+              "api_path": "/artists/2185815",
+              "header_image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+              "id": 2185815,
+              "image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Dale Prinsse",
+              "url": "https://genius.com/artists/Dale-prinsse"
+            }
+          ]
+        },
+        {
+          "label": "Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/1385660",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1385660,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jared Adlam",
+              "url": "https://genius.com/artists/Jared-adlam"
+            },
+            {
+              "api_path": "/artists/2248597",
+              "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "id": 2248597,
+              "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sam Vallen",
+              "url": "https://genius.com/artists/Sam-vallen"
+            }
+          ]
+        },
+        {
+          "label": "Copyright ©",
+          "artists": [
+            {
+              "api_path": "/artists/1220699",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1220699,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Inside Out Music",
+              "url": "https://genius.com/artists/Inside-out-music"
+            }
+          ]
+        },
+        {
+          "label": "Label",
+          "artists": [
+            {
+              "api_path": "/artists/1220699",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1220699,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Inside Out Music",
+              "url": "https://genius.com/artists/Inside-out-music"
+            }
+          ]
+        },
+        {
+          "label": "Vocals",
+          "artists": [
+            {
+              "api_path": "/artists/1461268",
+              "header_image_url": "https://images.genius.com/bdd4b96a1032163e0b0e5639d5c562b7.733x733x1.jpg",
+              "id": 1461268,
+              "image_url": "https://images.genius.com/bdd4b96a1032163e0b0e5639d5c562b7.733x733x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jim Grey",
+              "url": "https://genius.com/artists/Jim-grey"
+            }
+          ]
+        },
+        {
+          "label": "Phonographic Copyright ℗",
+          "artists": [
+            {
+              "api_path": "/artists/1220699",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1220699,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Inside Out Music",
+              "url": "https://genius.com/artists/Inside-out-music"
+            }
+          ]
+        },
+        {
+          "label": "Mastering Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/215454",
+              "header_image_url": "https://images.genius.com/1699841f2010a55124db0cbe9aaf13fb.1000x450x1.jpg",
+              "id": 215454,
+              "image_url": "https://images.genius.com/389b6296e73fb811a5bb815c1cdf792e.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Forrester Savell",
+              "url": "https://genius.com/artists/Forrester-savell"
+            }
+          ]
+        },
+        {
+          "label": "Mixing Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/2248597",
+              "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "id": 2248597,
+              "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sam Vallen",
+              "url": "https://genius.com/artists/Sam-vallen"
+            }
+          ]
+        },
+        {
+          "label": "Recording Engineer",
+          "artists": [
+            {
+              "api_path": "/artists/1385660",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "id": 1385660,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710258053",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Jared Adlam",
+              "url": "https://genius.com/artists/Jared-adlam"
+            },
+            {
+              "api_path": "/artists/2248597",
+              "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "id": 2248597,
+              "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sam Vallen",
+              "url": "https://genius.com/artists/Sam-vallen"
+            }
+          ]
+        },
+        {
+          "label": "Drums",
+          "artists": [
+            {
+              "api_path": "/artists/2560560",
+              "header_image_url": "https://images.genius.com/20af3e72292bf467e63831660680b4e6.957x957x1.jpg",
+              "id": 2560560,
+              "image_url": "https://images.genius.com/20af3e72292bf467e63831660680b4e6.957x957x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Josh Griffin",
+              "url": "https://genius.com/artists/Josh-griffin"
+            }
+          ]
+        },
+        {
+          "label": "Bass",
+          "artists": [
+            {
+              "api_path": "/artists/2185815",
+              "header_image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+              "id": 2185815,
+              "image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Dale Prinsse",
+              "url": "https://genius.com/artists/Dale-prinsse"
+            }
+          ]
+        },
+        {
+          "label": "Guitar",
+          "artists": [
+            {
+              "api_path": "/artists/2248597",
+              "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "id": 2248597,
+              "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sam Vallen",
+              "url": "https://genius.com/artists/Sam-vallen"
+            }
+          ]
+        }
+      ],
+      "description_annotation": {
+        "_type": "referent",
+        "annotator_id": 18141428,
+        "annotator_login": "Cause_4ffect",
+        "api_path": "/referents/30031204",
+        "classification": "needs_exegesis",
+        "fragment": "The World Breathes with Me",
+        "id": 30031204,
+        "is_description": true,
+        "path": "/30031204/Caligulas-horse-the-world-breathes-with-me/The-world-breathes-with-me",
+        "range": {
+          "content": "The World Breathes with Me"
+        },
+        "song_id": 9715712,
+        "url": "https://genius.com/30031204/Caligulas-horse-the-world-breathes-with-me/The-world-breathes-with-me",
+        "verified_annotator_ids": [],
+        "annotatable": {
+          "api_path": "/songs/9715712",
+          "client_timestamps": {
+            "updated_by_human_at": 1706189808,
+            "lyrics_updated_at": 1701889563
+          },
+          "context": "Caligula's Horse",
+          "id": 9715712,
+          "image_url": "https://images.genius.com/c2b08f9479dbbbd288c4f05390dcf6a9.1000x1000x1.png",
+          "link_title": "The World Breathes with Me by Caligula’s Horse",
+          "title": "The World Breathes with Me",
+          "type": "Song",
+          "url": "https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics"
+        },
+        "annotations": [
+          {
+            "api_path": "/annotations/30031204",
+            "body": {
+              "dom": {
+                "tag": "root"
+              }
+            },
+            "comment_count": 0,
+            "community": true,
+            "custom_preview": null,
+            "has_voters": false,
+            "id": 30031204,
+            "pinned": false,
+            "share_url": "https://genius.com/30031204",
+            "source": null,
+            "state": "needs_exegesis",
+            "url": "https://genius.com/30031204/Caligulas-horse-the-world-breathes-with-me/The-world-breathes-with-me",
+            "verified": false,
+            "votes_total": 0,
+            "current_user_metadata": {
+              "permissions": [],
+              "excluded_permissions": [
+                "vote",
+                "edit",
+                "cosign",
+                "uncosign",
+                "destroy",
+                "accept",
+                "reject",
+                "see_unreviewed",
+                "clear_votes",
+                "propose_edit_to",
+                "pin_to_profile",
+                "unpin_from_profile",
+                "update_source",
+                "edit_custom_preview",
+                "create_comment"
+              ],
+              "interactions": {
+                "cosign": false,
+                "pyong": false,
+                "vote": null
+              },
+              "iq_by_action": {}
+            },
+            "authors": [
+              {
+                "attribution": 1.0,
+                "pinned_role": null,
+                "user": {
+                  "api_path": "/users/18141428",
+                  "avatar": {
+                    "tiny": {
+                      "url": "https://images.genius.com/avatars/tiny/d0898f6ace81844b179a7bc330a1b4f3",
+                      "bounding_box": {
+                        "width": 16,
+                        "height": 16
+                      }
+                    },
+                    "thumb": {
+                      "url": "https://images.genius.com/avatars/thumb/d0898f6ace81844b179a7bc330a1b4f3",
+                      "bounding_box": {
+                        "width": 32,
+                        "height": 32
+                      }
+                    },
+                    "small": {
+                      "url": "https://images.genius.com/avatars/small/d0898f6ace81844b179a7bc330a1b4f3",
+                      "bounding_box": {
+                        "width": 100,
+                        "height": 100
+                      }
+                    },
+                    "medium": {
+                      "url": "https://images.genius.com/avatars/medium/d0898f6ace81844b179a7bc330a1b4f3",
+                      "bounding_box": {
+                        "width": 300,
+                        "height": 400
+                      }
+                    }
+                  },
+                  "header_image_url": "https://images.genius.com/avatars/medium/d0898f6ace81844b179a7bc330a1b4f3",
+                  "human_readable_role_for_display": "Contributor",
+                  "id": 18141428,
+                  "iq": 49777,
+                  "login": "Cause_4ffect",
+                  "name": "Cause_4ffect",
+                  "role_for_display": "contributor",
+                  "url": "https://genius.com/Cause_4ffect",
+                  "current_user_metadata": {
+                    "permissions": [],
+                    "excluded_permissions": [
+                      "follow"
+                    ],
+                    "interactions": {
+                      "following": false
+                    }
+                  }
+                }
+              }
+            ],
+            "cosigned_by": [],
+            "rejection_comment": null,
+            "verified_by": null
+          }
+        ]
+      },
+      "featured_artists": [],
+      "lyrics_marked_complete_by": {
+        "api_path": "/users/415839",
+        "avatar": {
+          "tiny": {
+            "url": "https://images.genius.com/avatars/tiny/8cdc0b3c025511b6962a1c21dd92480c",
+            "bounding_box": {
+              "width": 16,
+              "height": 16
+            }
+          },
+          "thumb": {
+            "url": "https://images.genius.com/avatars/thumb/8cdc0b3c025511b6962a1c21dd92480c",
+            "bounding_box": {
+              "width": 32,
+              "height": 32
+            }
+          },
+          "small": {
+            "url": "https://images.genius.com/avatars/small/8cdc0b3c025511b6962a1c21dd92480c",
+            "bounding_box": {
+              "width": 100,
+              "height": 100
+            }
+          },
+          "medium": {
+            "url": "https://images.genius.com/avatars/medium/8cdc0b3c025511b6962a1c21dd92480c",
+            "bounding_box": {
+              "width": 300,
+              "height": 400
+            }
+          }
+        },
+        "header_image_url": "https://images.genius.com/4c303cdd2f07a6112c469bc21efc6a6c.1000x563x1.jpg",
+        "human_readable_role_for_display": "Moderator",
+        "id": 415839,
+        "iq": 1216708,
+        "login": "jambi",
+        "name": "​jambi",
+        "role_for_display": "moderator",
+        "url": "https://genius.com/jambi",
+        "current_user_metadata": {
+          "permissions": [],
+          "excluded_permissions": [
+            "follow"
+          ],
+          "interactions": {
+            "following": false
+          }
+        }
+      },
+      "lyrics_marked_staff_approved_by": null,
+      "media": [
+        {
+          "provider": "youtube",
+          "start": 0,
+          "type": "video",
+          "url": "http://www.youtube.com/watch?v=vmZV4ruhdy4"
+        }
+      ],
+      "primary_artist": {
+        "api_path": "/artists/364764",
+        "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+        "id": 364764,
+        "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+        "is_meme_verified": false,
+        "is_verified": false,
+        "name": "Caligula’s Horse",
+        "url": "https://genius.com/artists/Caligulas-horse"
+      },
+      "producer_artists": [
+        {
+          "api_path": "/artists/2248597",
+          "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+          "id": 2248597,
+          "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Sam Vallen",
+          "url": "https://genius.com/artists/Sam-vallen"
+        }
+      ],
+      "song_relationships": [
+        {
+          "relationship_type": "samples",
+          "type": "samples",
+          "songs": []
+        },
+        {
+          "relationship_type": "sampled_in",
+          "type": "sampled_in",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolates",
+          "type": "interpolates",
+          "songs": []
+        },
+        {
+          "relationship_type": "interpolated_by",
+          "type": "interpolated_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "cover_of",
+          "type": "cover_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "covered_by",
+          "type": "covered_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "remix_of",
+          "type": "remix_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "remixed_by",
+          "type": "remixed_by",
+          "songs": []
+        },
+        {
+          "relationship_type": "live_version_of",
+          "type": "live_version_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "performed_live_as",
+          "type": "performed_live_as",
+          "songs": []
+        },
+        {
+          "relationship_type": "translation_of",
+          "type": "translation_of",
+          "songs": []
+        },
+        {
+          "relationship_type": "translations",
+          "type": "translations",
+          "songs": []
+        }
+      ],
+      "translation_songs": [],
+      "verified_annotations_by": [],
+      "verified_contributors": [],
+      "verified_lyrics_by": [],
+      "writer_artists": [
+        {
+          "api_path": "/artists/2248597",
+          "header_image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+          "id": 2248597,
+          "image_url": "https://images.genius.com/088749f387291745d871971ca83c30ac.1000x1000x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Sam Vallen",
+          "url": "https://genius.com/artists/Sam-vallen"
+        },
+        {
+          "api_path": "/artists/2560560",
+          "header_image_url": "https://images.genius.com/20af3e72292bf467e63831660680b4e6.957x957x1.jpg",
+          "id": 2560560,
+          "image_url": "https://images.genius.com/20af3e72292bf467e63831660680b4e6.957x957x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Josh Griffin",
+          "url": "https://genius.com/artists/Josh-griffin"
+        },
+        {
+          "api_path": "/artists/2185815",
+          "header_image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+          "id": 2185815,
+          "image_url": "https://images.genius.com/3bf5cc903e9d78becdd20485a0be596b.1000x1000x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Dale Prinsse",
+          "url": "https://genius.com/artists/Dale-prinsse"
+        },
+        {
+          "api_path": "/artists/1461268",
+          "header_image_url": "https://images.genius.com/bdd4b96a1032163e0b0e5639d5c562b7.733x733x1.jpg",
+          "id": 1461268,
+          "image_url": "https://images.genius.com/bdd4b96a1032163e0b0e5639d5c562b7.733x733x1.jpg",
+          "is_meme_verified": false,
+          "is_verified": false,
+          "name": "Jim Grey",
+          "url": "https://genius.com/artists/Jim-grey"
+        }
+      ]
+    }
+  }
+}
