@@ -8,12 +8,18 @@ import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.search.Immuta
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.search.ImmutableSearchRequestItem;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.search.SearchReply;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.search.SearchRequest;
+import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.song.GeniusSongReply;
+import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.song.ImmutableSongRequest;
+import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.song.SongReply;
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +27,9 @@ import org.springframework.stereotype.Component;
 public class GeniusLyricsRetriever extends GeniusApiBase
     implements LyricsRetriever<LyricsResponse, LyricsRequest> {
   private static final Logger LOGGER = LogManager.getLogger(GeniusLyricsRetriever.class);
+
+  private static final String USER_AGENT =
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0";
 
   private final HttpClient.Builder httpClientBuilder;
 
@@ -53,11 +62,33 @@ public class GeniusLyricsRetriever extends GeniusApiBase
 
     LOGGER.info("i got this back from the song search: {}", searchReply);
 
-    //    final SongReply songReply =
-    //        geniusSongRetriever.get(
-    //            ImmutableSongRequest.builder().addSongIds(1015520, 8652014, 9715712).build());
-    //
-    //    LOGGER.info("i got this back from the song retriever: {}", songReply);
+    // it's a pretty good assumption the first song in the list is the one we're looking for
+    final List<Long> songIds =
+        searchReply.getSearchResults().values().stream()
+            .filter(geniusSearchReply -> !geniusSearchReply.getResponse().getHits().isEmpty())
+            .map(
+                geniusSearchReply ->
+                    geniusSearchReply.getResponse().getHits().getFirst().getResult().getId())
+            .toList();
+
+    final SongReply songReply =
+        geniusSongRetriever.get(ImmutableSongRequest.builder().songIds(songIds).build());
+
+    for (final GeniusSongReply geniusSongReply : songReply.getSongReplies().values()) {
+      final Document doc =
+          Jsoup.connect(geniusSongReply.getResponse().getSong().getUrl().toString())
+              .userAgent(USER_AGENT)
+              .get();
+
+      final Elements lyrics = doc.select("div[class^=Lyrics__Container]");
+
+      LOGGER.info(
+          "The lyrics for {} are: {}",
+          geniusSongReply.getResponse().getSong().getFullTitle(),
+          lyrics.text());
+    }
+
+    LOGGER.info("i got this back from the song retriever: {}", songReply);
 
     return ImmutableLyricsResponse.builder()
         .addLyrics("syrup sandwiches", "syrup, syrup, syrup sandwiches")

@@ -55,10 +55,8 @@ public class GeniusSongRetrieverImpl extends GeniusApiBase implements GeniusSong
               songId,
               songResponse.body());
         } else {
-          final GeniusSongReply geniusSongReply =
-              objectMapper.readValue(songResponse.body(), GeniusSongReply.class);
-
-          songReply.putSongReplies(songId, geniusSongReply);
+          songReply.putSongReplies(
+              songId, objectMapper.readValue(songResponse.body(), GeniusSongReply.class));
         }
       }
     }

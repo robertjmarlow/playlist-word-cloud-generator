@@ -61,10 +61,9 @@ public class GeniusSongSearchImpl extends GeniusApiBase implements GeniusSongSea
               search,
               searchResponse.body());
         } else {
-          final GeniusSearchReply geniusSearchReply =
-              objectMapper.readValue(searchResponse.body(), GeniusSearchReply.class);
-
-          searchReply.putSearchResults(searchRequestItem, geniusSearchReply);
+          searchReply.putSearchResults(
+              searchRequestItem,
+              objectMapper.readValue(searchResponse.body(), GeniusSearchReply.class));
         }
       }
     }
