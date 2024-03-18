@@ -1,0 +1,498 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "response": {
+    "hits": [
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 7,
+          "api_path": "/songs/678224",
+          "artist_names": "Sheryl Crow",
+          "full_title": "A Change Would Do You Good by Sheryl Crow",
+          "header_image_thumbnail_url": "https://images.genius.com/5113b815ec0af19c36ffe870bd9cab95.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/5113b815ec0af19c36ffe870bd9cab95.1000x1000x1.jpg",
+          "id": 678224,
+          "lyrics_owner_id": 1368057,
+          "lyrics_state": "complete",
+          "path": "/Sheryl-crow-a-change-would-do-you-good-lyrics",
+          "pyongs_count": 1,
+          "relationships_index_url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-sample",
+          "release_date_components": {
+            "year": 1997,
+            "month": 6,
+            "day": 30
+          },
+          "release_date_for_display": "June 30, 1997",
+          "release_date_with_abbreviated_month_for_display": "Jun. 30, 1997",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c57e3d765350b5160b040cdc8e3bbe2e.300x303x1.jpg",
+          "song_art_image_url": "https://images.genius.com/c57e3d765350b5160b040cdc8e3bbe2e.441x445x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 5,
+            "hot": false,
+            "pageviews": 24851
+          },
+          "title": "A Change Would Do You Good",
+          "title_with_featured": "A Change Would Do You Good",
+          "url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/7109",
+            "header_image_url": "https://images.genius.com/2c2992251db0962ccddc2341aaacaaad.1000x333x1.jpg",
+            "id": 7109,
+            "image_url": "https://images.genius.com/75cae8c50d25a0d3e81ac2f7482fb9d8.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Sheryl Crow",
+            "url": "https://genius.com/artists/Sheryl-crow"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/6879043",
+          "artist_names": "Sheryl Crow",
+          "full_title": "A Change Would Do You Good (Live from the Ryman / 2019) by Sheryl Crow",
+          "header_image_thumbnail_url": "https://images.genius.com/e67c994c2a809d7118f9a549d22942ce.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/e67c994c2a809d7118f9a549d22942ce.1000x1000x1.jpg",
+          "id": 6879043,
+          "lyrics_owner_id": 6578,
+          "lyrics_state": "complete",
+          "path": "/Sheryl-crow-a-change-would-do-you-good-live-from-the-ryman-2019-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-live-from-the-ryman-2019-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/e67c994c2a809d7118f9a549d22942ce.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/e67c994c2a809d7118f9a549d22942ce.1000x1000x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "A Change Would Do You Good (Live from the Ryman / 2019)",
+          "title_with_featured": "A Change Would Do You Good (Live from the Ryman / 2019)",
+          "url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-live-from-the-ryman-2019-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/7109",
+            "header_image_url": "https://images.genius.com/2c2992251db0962ccddc2341aaacaaad.1000x333x1.jpg",
+            "id": 7109,
+            "image_url": "https://images.genius.com/75cae8c50d25a0d3e81ac2f7482fb9d8.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Sheryl Crow",
+            "url": "https://genius.com/artists/Sheryl-crow"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/9272800",
+          "artist_names": "Sheryl Crow",
+          "full_title": "A Change Would Do You Good (Live from Central Park, NYC, 09/14/99) by Sheryl Crow",
+          "header_image_thumbnail_url": "https://images.genius.com/143b503b10914c7c196b1ad69b00e5c1.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/143b503b10914c7c196b1ad69b00e5c1.591x591x1.jpg",
+          "id": 9272800,
+          "lyrics_owner_id": 3499648,
+          "lyrics_state": "unreleased",
+          "path": "/Sheryl-crow-a-change-would-do-you-good-live-from-central-park-nyc-09-14-99-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-live-from-central-park-nyc-09-14-99-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/143b503b10914c7c196b1ad69b00e5c1.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/143b503b10914c7c196b1ad69b00e5c1.591x591x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "A Change Would Do You Good (Live from Central Park, NYC, 09/14/99)",
+          "title_with_featured": "A Change Would Do You Good (Live from Central Park, NYC, 09/14/99)",
+          "url": "https://genius.com/Sheryl-crow-a-change-would-do-you-good-live-from-central-park-nyc-09-14-99-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/7109",
+            "header_image_url": "https://images.genius.com/2c2992251db0962ccddc2341aaacaaad.1000x333x1.jpg",
+            "id": 7109,
+            "image_url": "https://images.genius.com/75cae8c50d25a0d3e81ac2f7482fb9d8.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Sheryl Crow",
+            "url": "https://genius.com/artists/Sheryl-crow"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 165,
+          "api_path": "/songs/7979287",
+          "artist_names": "AlexanderJamesM",
+          "full_title": "Sheryl Crow Cleanup [Albums & Songs] by AlexanderJamesM",
+          "header_image_thumbnail_url": "https://images.genius.com/3ba2ea11d907b284bad324cec48a25c4.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/3ba2ea11d907b284bad324cec48a25c4.900x900x1.jpg",
+          "id": 7979287,
+          "lyrics_owner_id": 3499648,
+          "lyrics_state": "complete",
+          "path": "/Alexanderjamesm-sheryl-crow-cleanup-albums-and-songs-annotated",
+          "pyongs_count": 1,
+          "relationships_index_url": "https://genius.com/Alexanderjamesm-sheryl-crow-cleanup-albums-and-songs-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/3ba2ea11d907b284bad324cec48a25c4.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/3ba2ea11d907b284bad324cec48a25c4.900x900x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Sheryl Crow Cleanup [Albums & Songs]",
+          "title_with_featured": "Sheryl Crow Cleanup [Albums & Songs]",
+          "url": "https://genius.com/Alexanderjamesm-sheryl-crow-cleanup-albums-and-songs-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/1296661",
+            "header_image_url": "https://images.genius.com/e2ed622a063794b85e7e4ed340975df3.1000x750x1.jpg",
+            "id": 1296661,
+            "image_url": "https://images.genius.com/837849de0aff27899074a268354f6b6f.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "AlexanderJamesM",
+            "url": "https://genius.com/artists/Alexanderjamesm",
+            "iq": 1599921
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/1406636",
+          "artist_names": "Jack Ingram (Ft. Sheryl Crow)",
+          "full_title": "Hold On by Jack Ingram (Ft. Sheryl Crow)",
+          "header_image_thumbnail_url": "https://images.genius.com/df16d8e90f744db93c9e50bb6a55b290.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/df16d8e90f744db93c9e50bb6a55b290.1000x1000x1.jpg",
+          "id": 1406636,
+          "lyrics_owner_id": 6878633,
+          "lyrics_state": "complete",
+          "path": "/Jack-ingram-hold-on-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Jack-ingram-hold-on-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/df16d8e90f744db93c9e50bb6a55b290.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/df16d8e90f744db93c9e50bb6a55b290.1000x1000x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Hold On",
+          "title_with_featured": "Hold On (Ft. Sheryl Crow)",
+          "url": "https://genius.com/Jack-ingram-hold-on-lyrics",
+          "featured_artists": [
+            {
+              "api_path": "/artists/7109",
+              "header_image_url": "https://images.genius.com/2c2992251db0962ccddc2341aaacaaad.1000x333x1.jpg",
+              "id": 7109,
+              "image_url": "https://images.genius.com/75cae8c50d25a0d3e81ac2f7482fb9d8.1000x1000x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "Sheryl Crow",
+              "url": "https://genius.com/artists/Sheryl-crow"
+            }
+          ],
+          "primary_artist": {
+            "api_path": "/artists/86903",
+            "header_image_url": "https://images.genius.com/c73bf9784d1c356aaf1f0ef816a44b73.400x400x1.jpg",
+            "id": 86903,
+            "image_url": "https://images.genius.com/c73bf9784d1c356aaf1f0ef816a44b73.400x400x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Jack Ingram",
+            "url": "https://genius.com/artists/Jack-ingram"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 24,
+          "api_path": "/songs/272138",
+          "artist_names": "Lecrae (Ft. J.Paul)",
+          "full_title": "The Good Life by Lecrae (Ft. J.Paul)",
+          "header_image_thumbnail_url": "https://images.genius.com/f4cd18c738c90184c647f29ea90867c6.300x300x1.jpg",
+          "header_image_url": "https://images.genius.com/f4cd18c738c90184c647f29ea90867c6.540x540x1.jpg",
+          "id": 272138,
+          "lyrics_owner_id": 333043,
+          "lyrics_state": "complete",
+          "path": "/Lecrae-the-good-life-lyrics",
+          "pyongs_count": 2,
+          "relationships_index_url": "https://genius.com/Lecrae-the-good-life-sample",
+          "release_date_components": {
+            "year": 2011,
+            "month": 1,
+            "day": 11
+          },
+          "release_date_for_display": "January 11, 2011",
+          "release_date_with_abbreviated_month_for_display": "Jan. 11, 2011",
+          "song_art_image_thumbnail_url": "https://images.genius.com/f4cd18c738c90184c647f29ea90867c6.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/f4cd18c738c90184c647f29ea90867c6.540x540x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 3,
+            "hot": false
+          },
+          "title": "The Good Life",
+          "title_with_featured": "The Good Life (Ft. J.Paul)",
+          "url": "https://genius.com/Lecrae-the-good-life-lyrics",
+          "featured_artists": [
+            {
+              "api_path": "/artists/11966",
+              "header_image_url": "https://images.genius.com/4f090c3bc2187a5a87165a5588da3983.793x793x1.jpg",
+              "id": 11966,
+              "image_url": "https://images.genius.com/4f090c3bc2187a5a87165a5588da3983.793x793x1.jpg",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "J.Paul",
+              "url": "https://genius.com/artists/Jpaul"
+            }
+          ],
+          "primary_artist": {
+            "api_path": "/artists/1401",
+            "header_image_url": "https://images.genius.com/c61d9ac6ca11b2265fb46d4dac2b563d.1000x429x1.png",
+            "id": 1401,
+            "image_url": "https://images.genius.com/cf7a153b0f3097c9dab715e9806caf5d.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": true,
+            "name": "Lecrae",
+            "url": "https://genius.com/artists/Lecrae",
+            "iq": 3564
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/6998160",
+          "artist_names": "Genius",
+          "full_title": "August 2022 Singles Release Calendar by Genius",
+          "header_image_thumbnail_url": "https://images.genius.com/5c650f43c87bbc0b7c7956246c30ceaf.300x300x1.png",
+          "header_image_url": "https://images.genius.com/5c650f43c87bbc0b7c7956246c30ceaf.999x999x1.png",
+          "id": 6998160,
+          "lyrics_owner_id": 8723889,
+          "lyrics_state": "complete",
+          "path": "/Genius-august-2022-singles-release-calendar-annotated",
+          "pyongs_count": 1,
+          "relationships_index_url": "https://genius.com/Genius-august-2022-singles-release-calendar-sample",
+          "release_date_components": {
+            "year": 2022,
+            "month": 8,
+            "day": null
+          },
+          "release_date_for_display": "August 2022",
+          "release_date_with_abbreviated_month_for_display": "Aug. 2022",
+          "song_art_image_thumbnail_url": "https://images.genius.com/5c650f43c87bbc0b7c7956246c30ceaf.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/5c650f43c87bbc0b7c7956246c30ceaf.999x999x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false,
+            "pageviews": 26273
+          },
+          "title": "August 2022 Singles Release Calendar",
+          "title_with_featured": "August 2022 Singles Release Calendar",
+          "url": "https://genius.com/Genius-august-2022-singles-release-calendar-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/204611",
+            "header_image_url": "https://images.genius.com/822a5f872a1fcfe377695dc0046c6bc6.900x176x1.jpg",
+            "id": 204611,
+            "image_url": "https://images.genius.com/0ca83e3130e1303a7f78ba351e3091cd.1000x1000x1.png",
+            "is_meme_verified": true,
+            "is_verified": true,
+            "name": "Genius",
+            "url": "https://genius.com/artists/Genius",
+            "iq": 78801
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/518050",
+          "artist_names": "Star Trek",
+          "full_title": "Star Trek: The Corbomite Maneuver by Star Trek",
+          "header_image_thumbnail_url": "https://images.genius.com/d061b598e16d553864a1b62e9b2fd465.300x324x1.jpg",
+          "header_image_url": "https://images.genius.com/d061b598e16d553864a1b62e9b2fd465.463x500x1.jpg",
+          "id": 518050,
+          "lyrics_owner_id": 269182,
+          "lyrics_state": "complete",
+          "path": "/Star-trek-star-trek-the-corbomite-maneuver-annotated",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Star-trek-star-trek-the-corbomite-maneuver-sample",
+          "release_date_components": {
+            "year": 1966,
+            "month": 11,
+            "day": 9
+          },
+          "release_date_for_display": "November 9, 1966",
+          "release_date_with_abbreviated_month_for_display": "Nov. 9, 1966",
+          "song_art_image_thumbnail_url": "https://images.genius.com/d061b598e16d553864a1b62e9b2fd465.300x324x1.jpg",
+          "song_art_image_url": "https://images.genius.com/d061b598e16d553864a1b62e9b2fd465.463x500x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Star Trek: The Corbomite Maneuver",
+          "title_with_featured": "Star Trek: The Corbomite Maneuver",
+          "url": "https://genius.com/Star-trek-star-trek-the-corbomite-maneuver-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/960428",
+            "header_image_url": "https://s3.amazonaws.com/rapgenius/Star-Trek.jpg",
+            "id": 960428,
+            "image_url": "https://s3.amazonaws.com/rapgenius/Star-Trek.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Star Trek",
+            "url": "https://genius.com/artists/Star-trek"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/164853",
+          "artist_names": "Jack London",
+          "full_title": "The Sea-Wolf (Chap. 19) by Jack London",
+          "header_image_thumbnail_url": "https://images.genius.com/0464a69fb10c283ec1753ec5357fcd09.186x271x1.jpg",
+          "header_image_url": "https://images.genius.com/0464a69fb10c283ec1753ec5357fcd09.186x271x1.jpg",
+          "id": 164853,
+          "lyrics_owner_id": 225680,
+          "lyrics_state": "complete",
+          "path": "/Jack-london-the-sea-wolf-chap-19-annotated",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Jack-london-the-sea-wolf-chap-19-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/0464a69fb10c283ec1753ec5357fcd09.186x271x1.jpg",
+          "song_art_image_url": "https://images.genius.com/0464a69fb10c283ec1753ec5357fcd09.186x271x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "The Sea-Wolf (Chap. 19)",
+          "title_with_featured": "The Sea-Wolf (Chap. 19)",
+          "url": "https://genius.com/Jack-london-the-sea-wolf-chap-19-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/39843",
+            "header_image_url": "https://s3.amazonaws.com/rapgenius/250px-Jack_London_young.jpg",
+            "id": 39843,
+            "image_url": "https://s3.amazonaws.com/rapgenius/250px-Jack_London_young.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Jack London",
+            "url": "https://genius.com/artists/Jack-london"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 33,
+          "api_path": "/songs/2282141",
+          "artist_names": "URLtv (Ft. J. Fox & Soul Khan)",
+          "full_title": "Soul Khan vs. J. Fox by URLtv (Ft. J. Fox & Soul Khan)",
+          "header_image_thumbnail_url": "https://images.rapgenius.com/bbf8000280cbff12cbc7624c4027df00.300x225x1.jpg",
+          "header_image_url": "https://images.rapgenius.com/bbf8000280cbff12cbc7624c4027df00.480x360x1.jpg",
+          "id": 2282141,
+          "lyrics_owner_id": 2097801,
+          "lyrics_state": "complete",
+          "path": "/Urltv-soul-khan-vs-j-fox-annotated",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Urltv-soul-khan-vs-j-fox-sample",
+          "release_date_components": {
+            "year": 2010,
+            "month": 12,
+            "day": 12
+          },
+          "release_date_for_display": "December 12, 2010",
+          "release_date_with_abbreviated_month_for_display": "Dec. 12, 2010",
+          "song_art_image_thumbnail_url": "https://images.rapgenius.com/bbf8000280cbff12cbc7624c4027df00.300x225x1.jpg",
+          "song_art_image_url": "https://images.rapgenius.com/bbf8000280cbff12cbc7624c4027df00.480x360x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Soul Khan vs. J. Fox",
+          "title_with_featured": "Soul Khan vs. J. Fox (Ft. J. Fox & Soul Khan)",
+          "url": "https://genius.com/Urltv-soul-khan-vs-j-fox-annotated",
+          "featured_artists": [
+            {
+              "api_path": "/artists/551069",
+              "header_image_url": "https://assets.genius.com/images/default_avatar_300.png?1710791375",
+              "id": 551069,
+              "image_url": "https://assets.genius.com/images/default_avatar_300.png?1710791375",
+              "is_meme_verified": false,
+              "is_verified": false,
+              "name": "J. Fox",
+              "url": "https://genius.com/artists/J-fox"
+            },
+            {
+              "api_path": "/artists/1006",
+              "header_image_url": "https://s3.amazonaws.com/rapgenius/1305578373_Soul-Khan1.jpg",
+              "id": 1006,
+              "image_url": "https://s3.amazonaws.com/rapgenius/1305578373_Soul-Khan1.jpg",
+              "is_meme_verified": false,
+              "is_verified": true,
+              "name": "Soul Khan",
+              "url": "https://genius.com/artists/Soul-khan",
+              "iq": 18943
+            }
+          ],
+          "primary_artist": {
+            "api_path": "/artists/52179",
+            "header_image_url": "https://images.genius.com/dbd1a55c19ec1f132415ebb4f567ab24.1000x563x1.jpg",
+            "id": 52179,
+            "image_url": "https://images.genius.com/22d1af0c26c626cd5bc86d48bea31c50.400x400x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "URLtv",
+            "url": "https://genius.com/artists/Urltv"
+          }
+        }
+      }
+    ]
+  }
+}

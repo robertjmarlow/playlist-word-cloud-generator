@@ -2,6 +2,7 @@ package com.marlowsoft.playlistwordcloudgenerator;
 
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.LyricsRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsRequest;
+import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsRequestTrack;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsRequest;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsResponse;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.PlaylistRetriever;
@@ -35,13 +36,21 @@ public class PlaylistWordCloudGeneratorApplication {
 
       @Override
       public void run(String... args) throws Exception {
-        //        final Playlist playlist = playlistRetriever.getPlaylist("4H9YsKpBfjbnmOlyZIIlgy");
+        // get all the tracks in the playlist
+        final Playlist playlist = playlistRetriever.getPlaylist("4H9YsKpBfjbnmOlyZIIlgy");
 
-        //        LOGGER.info("i got this playlist back: {}", playlist);
+        // get lyrics for every track
+        final ImmutableLyricsRequest.Builder lyricsRequestBuilder =
+            ImmutableLyricsRequest.builder();
+        for (final Playlist.TrackItem trackItem : playlist.getTracks().getTrackItems()) {
+          lyricsRequestBuilder.addLyricsRequestTracks(
+              ImmutableLyricsRequestTrack.builder()
+                  .artist(trackItem.getTrackObject().getArtists().getFirst().getName())
+                  .song(trackItem.getTrackObject().getName())
+                  .build());
+        }
 
-        final LyricsResponse response =
-            lyricsRetriever.getLyrics(
-                ImmutableLyricsRequest.builder().artist("Kendrick Lamar").song("HUMBLE.").build());
+        final LyricsResponse response = lyricsRetriever.getLyrics(lyricsRequestBuilder.build());
         final List<String> lyrics = response.getLyrics();
 
         LOGGER.info("i got these lyrics back: {}", lyrics);

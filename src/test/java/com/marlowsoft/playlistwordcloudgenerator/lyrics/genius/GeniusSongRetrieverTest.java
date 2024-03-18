@@ -56,11 +56,12 @@ public class GeniusSongRetrieverTest {
     when(httpResponse.body())
         .thenReturn(
             Resources.toString(
-                Resources.getResource("genius/ghost-of-perdition.json"), StandardCharsets.UTF_8),
+                Resources.getResource("genius/song/ghost-of-perdition.json"),
+                StandardCharsets.UTF_8),
             Resources.toString(
-                Resources.getResource("genius/dying-star.json"), StandardCharsets.UTF_8),
+                Resources.getResource("genius/song/dying-star.json"), StandardCharsets.UTF_8),
             Resources.toString(
-                Resources.getResource("genius/the-world-breathes-with-me.json"),
+                Resources.getResource("genius/song/the-world-breathes-with-me.json"),
                 StandardCharsets.UTF_8));
 
     final long songId1 = 1015520; // Ghost of Perdition
@@ -107,10 +108,12 @@ public class GeniusSongRetrieverTest {
     when(httpResponse.body())
         .thenReturn(
             Resources.toString(
-                Resources.getResource("genius/ghost-of-perdition.json"), StandardCharsets.UTF_8),
-            Resources.toString(Resources.getResource("genius/404.json"), StandardCharsets.UTF_8),
+                Resources.getResource("genius/song/ghost-of-perdition.json"),
+                StandardCharsets.UTF_8),
             Resources.toString(
-                Resources.getResource("genius/the-world-breathes-with-me.json"),
+                Resources.getResource("genius/song/404.json"), StandardCharsets.UTF_8),
+            Resources.toString(
+                Resources.getResource("genius/song/the-world-breathes-with-me.json"),
                 StandardCharsets.UTF_8));
 
     final long songId1 = 1015520; // Ghost of Perdition
