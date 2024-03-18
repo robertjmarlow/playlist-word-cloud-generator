@@ -1,5 +1,6 @@
 package com.marlowsoft.playlistwordcloudgenerator;
 
+import com.google.common.collect.ImmutableList;
 import com.kennycason.kumo.CollisionMode;
 import com.kennycason.kumo.WordCloud;
 import com.kennycason.kumo.bg.CircleBackground;
@@ -16,6 +17,7 @@ import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Playlist;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.List;
+import java.util.regex.Pattern;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,8 @@ public class PlaylistWordCloudGeneratorApplication {
   public CommandLineRunner commandLineRunner(
       ConfigurableApplicationContext configurableApplicationContext) {
     return new CommandLineRunner() {
+      private static final Pattern SECTION_ANNOTATION_PATTERN = Pattern.compile("\\[.*\\]");
+
       @Autowired PlaylistRetriever<Playlist, String> playlistRetriever;
 
       @Autowired LyricsRetriever<LyricsResponse, LyricsRequest> lyricsRetriever;
@@ -58,10 +62,14 @@ public class PlaylistWordCloudGeneratorApplication {
                   .build());
         }
 
-        final List<String> lyrics =
-            lyricsRetriever.getLyrics(lyricsRequestBuilder.build()).getLyrics();
+        List<String> lyrics = lyricsRetriever.getLyrics(lyricsRequestBuilder.build()).getLyrics();
 
         LOGGER.info("i got these lyrics back: {}", lyrics);
+
+        // get rid of section annotations
+        lyrics = removeSectionAnnotations(lyrics);
+
+        // get rid of "boring words"
 
         // generate the word cloud
         final FrequencyAnalyzer frequencyAnalyzer = new FrequencyAnalyzer();
@@ -87,6 +95,16 @@ public class PlaylistWordCloudGeneratorApplication {
                 new Color(0xFFFFFF)));
         wordCloud.setFontScalar(new SqrtFontScalar(10, 40));
         return wordCloud;
+      }
+
+      private static List<String> removeSectionAnnotations(final List<String> lyrics) {
+        ImmutableList.Builder<String> updatedLyrics = ImmutableList.builder();
+
+        for (final String songLyrics : lyrics) {
+          updatedLyrics.add(SECTION_ANNOTATION_PATTERN.matcher(songLyrics).replaceAll(""));
+        }
+
+        return updatedLyrics.build();
       }
     };
   }

@@ -2,6 +2,7 @@ package com.marlowsoft.playlistwordcloudgenerator.inject;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.guava.GuavaModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.net.http.HttpClient;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -17,7 +18,8 @@ public class PlaylistWordCloudGeneratorConfig {
     final ObjectMapper objectMapper = new ObjectMapper();
     objectMapper
         .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-        .registerModule(new JavaTimeModule());
+        .registerModule(new JavaTimeModule())
+        .registerModule(new GuavaModule());
     return objectMapper;
   }
 

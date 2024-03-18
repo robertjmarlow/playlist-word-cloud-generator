@@ -21,6 +21,8 @@ dependencies {
 	def immutablesVersion = "2.10.1"
 	annotationProcessor "org.immutables:value:$immutablesVersion"
 	compileOnly "org.immutables:value:$immutablesVersion"
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava'
+	implementation 'com.google.guava:guava:33.0.0-jre'
 	implementation 'com.kennycason:kumo-core:1.28'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -29,7 +31,6 @@ dependencies {
 	implementation 'org.jsoup:jsoup:1.17.2'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'com.google.guava:guava:33.0.0-jre'
 }
 
 tasks.named('test') {
