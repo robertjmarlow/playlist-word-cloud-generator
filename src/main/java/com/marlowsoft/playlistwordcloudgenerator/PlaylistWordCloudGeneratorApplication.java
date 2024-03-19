@@ -1,6 +1,9 @@
 package com.marlowsoft.playlistwordcloudgenerator;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
+import com.google.common.io.Resources;
 import com.kennycason.kumo.CollisionMode;
 import com.kennycason.kumo.WordCloud;
 import com.kennycason.kumo.bg.CircleBackground;
@@ -14,8 +17,10 @@ import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsRequest
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsResponse;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.PlaylistRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Playlist;
+import com.marlowsoft.playlistwordcloudgenerator.wordcloud.obj.BoringWords;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
 import org.apache.logging.log4j.LogManager;
@@ -40,7 +45,7 @@ public class PlaylistWordCloudGeneratorApplication {
   public CommandLineRunner commandLineRunner(
       ConfigurableApplicationContext configurableApplicationContext) {
     return new CommandLineRunner() {
-      private static final Pattern SECTION_ANNOTATION_PATTERN = Pattern.compile("\\[.*\\]");
+      @Autowired ObjectMapper objectMapper;
 
       @Autowired PlaylistRetriever<Playlist, String> playlistRetriever;
 
@@ -70,17 +75,18 @@ public class PlaylistWordCloudGeneratorApplication {
         lyrics = removeSectionAnnotations(lyrics);
 
         // get rid of "boring words"
+        lyrics = removeBoringWords(lyrics);
+
+        LOGGER.info("the more interesting lyrics are: {}", lyrics);
 
         // generate the word cloud
-        final FrequencyAnalyzer frequencyAnalyzer = new FrequencyAnalyzer();
-        final WordCloud wordCloud = getWordCloud();
-        wordCloud.build(frequencyAnalyzer.load(lyrics));
-        wordCloud.writeToFile("build/wordcloud_circle_sqrt_font.png");
+        createWordCloud(lyrics, "build/wordcloud_circle_sqrt_font.png");
 
         System.exit(SpringApplication.exit(configurableApplicationContext));
       }
 
-      private static WordCloud getWordCloud() {
+      private void createWordCloud(final List<String> lyrics, final String outputFileName) {
+        final FrequencyAnalyzer frequencyAnalyzer = new FrequencyAnalyzer();
         final WordCloud wordCloud =
             new WordCloud(new Dimension(600, 600), CollisionMode.PIXEL_PERFECT);
         wordCloud.setPadding(2);
@@ -94,17 +100,40 @@ public class PlaylistWordCloudGeneratorApplication {
                 new Color(0x40D3F1),
                 new Color(0xFFFFFF)));
         wordCloud.setFontScalar(new SqrtFontScalar(10, 40));
-        return wordCloud;
+        wordCloud.build(frequencyAnalyzer.load(lyrics));
+        wordCloud.writeToFile(outputFileName);
       }
 
-      private static List<String> removeSectionAnnotations(final List<String> lyrics) {
-        ImmutableList.Builder<String> updatedLyrics = ImmutableList.builder();
+      private List<String> removeSectionAnnotations(final List<String> lyrics) {
+        final Pattern sectionAnnotationPattern = Pattern.compile("\\[.*\\]");
+
+        final ImmutableList.Builder<String> updatedLyricsBuilder =
+            ImmutableList.builderWithExpectedSize(lyrics.size());
 
         for (final String songLyrics : lyrics) {
-          updatedLyrics.add(SECTION_ANNOTATION_PATTERN.matcher(songLyrics).replaceAll(""));
+          updatedLyricsBuilder.add(sectionAnnotationPattern.matcher(songLyrics).replaceAll(""));
         }
 
-        return updatedLyrics.build();
+        return updatedLyricsBuilder.build();
+      }
+
+      private List<String> removeBoringWords(final List<String> lyrics) throws IOException {
+        final BoringWords boringWords =
+            objectMapper.readValue(Resources.getResource("boring-words.json"), BoringWords.class);
+
+        final Pattern boringWordsPattern =
+            Pattern.compile(
+                String.format("\\b(%s)\\b", Joiner.on('|').join(boringWords.getBoringWords())),
+                Pattern.CASE_INSENSITIVE);
+
+        final ImmutableList.Builder<String> updatedLyricsBuilder =
+            ImmutableList.builderWithExpectedSize(lyrics.size());
+
+        for (final String songLyrics : lyrics) {
+          updatedLyricsBuilder.add(boringWordsPattern.matcher(songLyrics).replaceAll(""));
+        }
+
+        return updatedLyricsBuilder.build();
       }
     };
   }
