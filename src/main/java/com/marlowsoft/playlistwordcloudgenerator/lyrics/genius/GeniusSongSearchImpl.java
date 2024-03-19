@@ -39,6 +39,11 @@ public class GeniusSongSearchImpl extends GeniusApiBase implements GeniusSongSea
         final String search =
             String.format("%s %s", searchRequestItem.getArtist(), searchRequestItem.getTrack());
 
+        LOGGER.info(
+            "Searching for: {} - \"{}\"",
+            searchRequestItem.getArtist(),
+            searchRequestItem.getTrack());
+
         final HttpResponse<String> searchResponse =
             client.send(
                 HttpRequest.newBuilder()

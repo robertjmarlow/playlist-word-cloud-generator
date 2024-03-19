@@ -35,6 +35,8 @@ public class GeniusSongRetrieverImpl extends GeniusApiBase implements GeniusSong
 
     try (final HttpClient client = httpClientBuilder.build()) {
       for (final Long songId : songRequest.getSongIds()) {
+        LOGGER.info("Getting songId: [{}]", songId);
+
         final HttpResponse<String> songResponse =
             client.send(
                 HttpRequest.newBuilder()

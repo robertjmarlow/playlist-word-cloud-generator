@@ -74,6 +74,10 @@ public class GeniusLyricsRetriever extends GeniusApiBase
 
     // for each song, scrape the lyrics page for the lyrics
     for (final GeniusSongReply geniusSongReply : songReply.getSongReplies().values()) {
+      LOGGER.info(
+          "Scraping the Genius page for \"{}\" for lyrics",
+          geniusSongReply.getResponse().getSong().getFullTitle());
+
       final Document doc =
           Jsoup.connect(geniusSongReply.getResponse().getSong().getUrl().toString())
               .userAgent(USER_AGENT)
@@ -81,7 +85,7 @@ public class GeniusLyricsRetriever extends GeniusApiBase
 
       final Elements lyrics = doc.select("div[class^=Lyrics__Container]");
 
-      responseBuilder.addLyrics(lyrics.text());
+      responseBuilder.song(geniusSongReply.getResponse().getSong()).addLyrics(lyrics.text());
     }
 
     return responseBuilder.build();
