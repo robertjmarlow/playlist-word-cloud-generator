@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "response": {
+    "hits": [
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/9715712",
+          "artist_names": "Caligula's Horse",
+          "full_title": "The World Breathes with Me by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/b6876fb666672d9d81017097d62a9f18.300x300x1.png",
+          "header_image_url": "https://images.genius.com/b6876fb666672d9d81017097d62a9f18.1000x1000x1.png",
+          "id": 9715712,
+          "lyrics_owner_id": 18141428,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-the-world-breathes-with-me-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-the-world-breathes-with-me-sample",
+          "release_date_components": {
+            "year": 2023,
+            "month": 12,
+            "day": 7
+          },
+          "release_date_for_display": "December 7, 2023",
+          "release_date_with_abbreviated_month_for_display": "Dec. 7, 2023",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c2b08f9479dbbbd288c4f05390dcf6a9.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/c2b08f9479dbbbd288c4f05390dcf6a9.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false,
+            "pageviews": 5198
+          },
+          "title": "The World Breathes with Me",
+          "title_with_featured": "The World Breathes with Me",
+          "url": "https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/9982174",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Mute by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/4f759fc42827b85f593c9005a2023bda.300x169x1.jpg",
+          "header_image_url": "https://images.genius.com/4f759fc42827b85f593c9005a2023bda.1000x563x1.jpg",
+          "id": 9982174,
+          "lyrics_owner_id": 415839,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-mute-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-mute-sample",
+          "release_date_components": {
+            "year": 2024,
+            "month": 1,
+            "day": 26
+          },
+          "release_date_for_display": "January 26, 2024",
+          "release_date_with_abbreviated_month_for_display": "Jan. 26, 2024",
+          "song_art_image_thumbnail_url": "https://images.genius.com/2e6fc4efce833e9550797238d7a16079.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/2e6fc4efce833e9550797238d7a16079.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 1,
+            "hot": false
+          },
+          "title": "Mute",
+          "title_with_featured": "Mute",
+          "url": "https://genius.com/Caligulas-horse-mute-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/5346887",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Valkyrie by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/eac4ba09521d057e87bc727daaa6c59c.300x300x1.png",
+          "header_image_url": "https://images.genius.com/eac4ba09521d057e87bc727daaa6c59c.1000x1000x1.png",
+          "id": 5346887,
+          "lyrics_owner_id": 6578,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-valkyrie-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-valkyrie-sample",
+          "release_date_components": {
+            "year": 2020,
+            "month": 5,
+            "day": 7
+          },
+          "release_date_for_display": "May 7, 2020",
+          "release_date_with_abbreviated_month_for_display": "May. 7, 2020",
+          "song_art_image_thumbnail_url": "https://images.genius.com/c2feab4d49ae500bc7d998dfc3987d25.300x300x1.jpg",
+          "song_art_image_url": "https://images.genius.com/c2feab4d49ae500bc7d998dfc3987d25.1000x1000x1.jpg",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Valkyrie",
+          "title_with_featured": "Valkyrie",
+          "url": "https://genius.com/Caligulas-horse-valkyrie-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/9982077",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Charcoal Grace I: Prey by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/00aba3e5cff5fde5562c61aa75b594f6.300x169x1.jpg",
+          "header_image_url": "https://images.genius.com/00aba3e5cff5fde5562c61aa75b594f6.1000x563x1.jpg",
+          "id": 9982077,
+          "lyrics_owner_id": 415839,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-charcoal-grace-i-prey-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-charcoal-grace-i-prey-sample",
+          "release_date_components": {
+            "year": 2024,
+            "month": 1,
+            "day": 26
+          },
+          "release_date_for_display": "January 26, 2024",
+          "release_date_with_abbreviated_month_for_display": "Jan. 26, 2024",
+          "song_art_image_thumbnail_url": "https://images.genius.com/2e6fc4efce833e9550797238d7a16079.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/2e6fc4efce833e9550797238d7a16079.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Charcoal Grace I: Prey",
+          "title_with_featured": "Charcoal Grace I: Prey",
+          "url": "https://genius.com/Caligulas-horse-charcoal-grace-i-prey-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/3122946",
+          "artist_names": "Caligula's Horse",
+          "full_title": "The Cannon's Mouth by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.300x300x1.png",
+          "header_image_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.1000x1000x1.png",
+          "id": 3122946,
+          "lyrics_owner_id": 1063466,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-the-cannons-mouth-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-the-cannons-mouth-sample",
+          "release_date_components": {
+            "year": 2017,
+            "month": 9,
+            "day": 15
+          },
+          "release_date_for_display": "September 15, 2017",
+          "release_date_with_abbreviated_month_for_display": "Sep. 15, 2017",
+          "song_art_image_thumbnail_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false,
+            "pageviews": 6487
+          },
+          "title": "The Cannon’s Mouth",
+          "title_with_featured": "The Cannon's Mouth",
+          "url": "https://genius.com/Caligulas-horse-the-cannons-mouth-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/2506631",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Rust by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/e62e22749acc6b0db76c7aae7ac505bf.300x300x1.png",
+          "header_image_url": "https://images.genius.com/e62e22749acc6b0db76c7aae7ac505bf.1000x1000x1.png",
+          "id": 2506631,
+          "lyrics_owner_id": 6578,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-rust-lyrics",
+          "pyongs_count": 1,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-rust-sample",
+          "release_date_components": {
+            "year": 2015,
+            "month": 10,
+            "day": 16
+          },
+          "release_date_for_display": "October 16, 2015",
+          "release_date_with_abbreviated_month_for_display": "Oct. 16, 2015",
+          "song_art_image_thumbnail_url": "https://images.genius.com/e62e22749acc6b0db76c7aae7ac505bf.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/e62e22749acc6b0db76c7aae7ac505bf.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false,
+            "pageviews": 6743
+          },
+          "title": "Rust",
+          "title_with_featured": "Rust",
+          "url": "https://genius.com/Caligulas-horse-rust-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/1148369",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Colossus by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.300x300x1.png",
+          "header_image_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.1000x1000x1.png",
+          "id": 1148369,
+          "lyrics_owner_id": 415839,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-colossus-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-colossus-sample",
+          "release_date_components": {
+            "year": 2011,
+            "month": 4,
+            "day": 2
+          },
+          "release_date_for_display": "April 2, 2011",
+          "release_date_with_abbreviated_month_for_display": "Apr. 2, 2011",
+          "song_art_image_thumbnail_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Colossus",
+          "title_with_featured": "Colossus",
+          "url": "https://genius.com/Caligulas-horse-colossus-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 5,
+          "api_path": "/songs/3122945",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Inertia and the Weapon of the Wall by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.300x300x1.png",
+          "header_image_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.1000x1000x1.png",
+          "id": 3122945,
+          "lyrics_owner_id": 3174112,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-inertia-and-the-weapon-of-the-wall-annotated",
+          "pyongs_count": 3,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-inertia-and-the-weapon-of-the-wall-sample",
+          "release_date_components": {
+            "year": 2017,
+            "month": 9,
+            "day": 15
+          },
+          "release_date_for_display": "September 15, 2017",
+          "release_date_with_abbreviated_month_for_display": "Sep. 15, 2017",
+          "song_art_image_thumbnail_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/473a107bf2c3b8c09c6b80b36997502d.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 4,
+            "hot": false,
+            "pageviews": 10716
+          },
+          "title": "Inertia and the Weapon of the Wall",
+          "title_with_featured": "Inertia and the Weapon of the Wall",
+          "url": "https://genius.com/Caligulas-horse-inertia-and-the-weapon-of-the-wall-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 1,
+          "api_path": "/songs/903051",
+          "artist_names": "Caligula's Horse",
+          "full_title": "Silence by Caligula's Horse",
+          "header_image_thumbnail_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.300x300x1.png",
+          "header_image_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.1000x1000x1.png",
+          "id": 903051,
+          "lyrics_owner_id": 415839,
+          "lyrics_state": "complete",
+          "path": "/Caligulas-horse-silence-lyrics",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Caligulas-horse-silence-sample",
+          "release_date_components": {
+            "year": 2011,
+            "month": 4,
+            "day": 2
+          },
+          "release_date_for_display": "April 2, 2011",
+          "release_date_with_abbreviated_month_for_display": "Apr. 2, 2011",
+          "song_art_image_thumbnail_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/962bcba2e8f153deaa9d9cf9ce2c4e0e.1000x1000x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Silence",
+          "title_with_featured": "Silence",
+          "url": "https://genius.com/Caligulas-horse-silence-lyrics",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/364764",
+            "header_image_url": "https://images.genius.com/d2d90f4aa44dd57f1fe8bb9eaa48f9fe.1000x328x1.jpg",
+            "id": 364764,
+            "image_url": "https://images.genius.com/612a50b3b8e7ad1e738f3ff96be598a9.1000x1000x1.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Caligula’s Horse",
+            "url": "https://genius.com/artists/Caligulas-horse"
+          }
+        }
+      },
+      {
+        "highlights": [],
+        "index": "song",
+        "type": "song",
+        "result": {
+          "annotation_count": 0,
+          "api_path": "/songs/8502658",
+          "artist_names": "Robert Browning",
+          "full_title": "Count Guido Franceschini by Robert Browning",
+          "header_image_thumbnail_url": "https://images.genius.com/07fe46b65dfd9d476573c0947c2dae11.300x300x1.png",
+          "header_image_url": "https://images.genius.com/07fe46b65dfd9d476573c0947c2dae11.311x311x1.png",
+          "id": 8502658,
+          "lyrics_owner_id": 4274810,
+          "lyrics_state": "complete",
+          "path": "/Robert-browning-count-guido-franceschini-annotated",
+          "pyongs_count": null,
+          "relationships_index_url": "https://genius.com/Robert-browning-count-guido-franceschini-sample",
+          "release_date_components": null,
+          "release_date_for_display": null,
+          "release_date_with_abbreviated_month_for_display": null,
+          "song_art_image_thumbnail_url": "https://images.genius.com/07fe46b65dfd9d476573c0947c2dae11.300x300x1.png",
+          "song_art_image_url": "https://images.genius.com/07fe46b65dfd9d476573c0947c2dae11.311x311x1.png",
+          "stats": {
+            "unreviewed_annotations": 0,
+            "hot": false
+          },
+          "title": "Count Guido Franceschini",
+          "title_with_featured": "Count Guido Franceschini",
+          "url": "https://genius.com/Robert-browning-count-guido-franceschini-annotated",
+          "featured_artists": [],
+          "primary_artist": {
+            "api_path": "/artists/30523",
+            "header_image_url": "https://s3.amazonaws.com/rapgenius/marks_main2_2162312b.jpg",
+            "id": 30523,
+            "image_url": "https://s3.amazonaws.com/rapgenius/marks_main2_2162312b.jpg",
+            "is_meme_verified": false,
+            "is_verified": false,
+            "name": "Robert Browning",
+            "url": "https://genius.com/artists/Robert-browning"
+          }
+        }
+      }
+    ]
+  }
+}

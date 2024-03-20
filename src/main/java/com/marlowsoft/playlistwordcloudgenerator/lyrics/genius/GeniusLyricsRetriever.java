@@ -2,6 +2,7 @@ package com.marlowsoft.playlistwordcloudgenerator.lyrics.genius;
 
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.LyricsRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsResponse;
+import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsResponseTrack;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsRequest;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsResponse;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.search.ImmutableSearchRequest;
@@ -14,7 +15,6 @@ import java.io.IOException;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,18 +25,20 @@ public class GeniusLyricsRetriever extends GeniusApiBase
     implements LyricsRetriever<LyricsResponse, LyricsRequest> {
   private static final Logger LOGGER = LogManager.getLogger(GeniusLyricsRetriever.class);
 
-  private static final String USER_AGENT =
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0";
-
   private final GeniusSongSearch geniusSongSearch;
 
   private final GeniusSongRetriever geniusSongRetriever;
 
+  private final ConnectionRetriever connectionRetriever;
+
   @Autowired
   GeniusLyricsRetriever(
-      GeniusSongSearch geniusSongSearch, GeniusSongRetriever geniusSongRetriever) {
+      GeniusSongSearch geniusSongSearch,
+      GeniusSongRetriever geniusSongRetriever,
+      ConnectionRetriever connectionRetriever) {
     this.geniusSongSearch = geniusSongSearch;
     this.geniusSongRetriever = geniusSongRetriever;
+    this.connectionRetriever = connectionRetriever;
   }
 
   @Override
@@ -79,13 +81,15 @@ public class GeniusLyricsRetriever extends GeniusApiBase
           geniusSongReply.getResponse().getSong().getFullTitle());
 
       final Document doc =
-          Jsoup.connect(geniusSongReply.getResponse().getSong().getUrl().toString())
-              .userAgent(USER_AGENT)
-              .get();
+          connectionRetriever.get(geniusSongReply.getResponse().getSong().getUrl()).get();
 
       final Elements lyrics = doc.select("div[class^=Lyrics__Container]");
 
-      responseBuilder.song(geniusSongReply.getResponse().getSong()).addLyrics(lyrics.text());
+      responseBuilder.addLyricsResponseTracks(
+          ImmutableLyricsResponseTrack.builder()
+              .song(geniusSongReply.getResponse().getSong())
+              .addLyrics(lyrics.text())
+              .build());
     }
 
     return responseBuilder.build();

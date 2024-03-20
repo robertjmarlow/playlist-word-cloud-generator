@@ -6,7 +6,12 @@ import org.immutables.value.Value;
 
 @Value.Immutable
 public interface LyricsResponse {
-  GeniusSongReply.Song getSong();
+  List<LyricsResponseTrack> getLyricsResponseTracks();
 
-  List<String> getLyrics();
+  @Value.Immutable
+  interface LyricsResponseTrack {
+    GeniusSongReply.Song getSong();
+
+    List<String> getLyrics();
+  }
 }
