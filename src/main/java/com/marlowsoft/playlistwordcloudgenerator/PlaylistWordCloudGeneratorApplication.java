@@ -1,15 +1,6 @@
 package com.marlowsoft.playlistwordcloudgenerator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
-import com.google.common.io.Resources;
-import com.kennycason.kumo.CollisionMode;
-import com.kennycason.kumo.WordCloud;
-import com.kennycason.kumo.bg.CircleBackground;
-import com.kennycason.kumo.font.scale.SqrtFontScalar;
-import com.kennycason.kumo.nlp.FrequencyAnalyzer;
-import com.kennycason.kumo.palette.ColorPalette;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.LyricsRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsRequest;
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.ImmutableLyricsRequestTrack;
@@ -17,12 +8,9 @@ import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsRequest
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.LyricsResponse;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.PlaylistRetriever;
 import com.marlowsoft.playlistwordcloudgenerator.playlist.spotify.obj.Playlist;
-import com.marlowsoft.playlistwordcloudgenerator.wordcloud.obj.BoringWords;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.io.IOException;
+import com.marlowsoft.playlistwordcloudgenerator.util.LyricsMassagingUtils;
+import com.marlowsoft.playlistwordcloudgenerator.wordcloud.WordCloudGenerator;
 import java.util.List;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,10 +40,14 @@ public class PlaylistWordCloudGeneratorApplication {
 
       @Autowired LyricsRetriever<LyricsResponse, LyricsRequest> lyricsRetriever;
 
+      @Autowired WordCloudGenerator wordCloudGenerator;
+
       @Override
       public void run(String... args) throws Exception {
         // get all the tracks in the playlist
-        final Playlist playlist = playlistRetriever.getPlaylist("4H9YsKpBfjbnmOlyZIIlgy");
+        final Playlist playlist = playlistRetriever.getPlaylist(args[0]);
+
+        LOGGER.info("I found playlist: \"{}\"", playlist.getName());
 
         // get lyrics for every track
         final ImmutableLyricsRequest.Builder lyricsRequestBuilder =
@@ -67,79 +59,28 @@ public class PlaylistWordCloudGeneratorApplication {
                   .song(trackItem.getTrackObject().getName())
                   .build());
         }
-
         final LyricsResponse lyricsResponse =
             lyricsRetriever.getLyrics(lyricsRequestBuilder.build());
+
+        // smash all the lyrics into a single list
+        LOGGER.info("Messing around with the lyrics a bit");
         List<String> lyrics =
             lyricsResponse.getLyricsResponseTracks().stream()
                 .map(LyricsResponse.LyricsResponseTrack::getLyrics)
                 .collect(Collectors.toList());
 
-        LOGGER.info("i got these lyrics back: {}", lyrics);
-
         // get rid of section annotations
-        lyrics = removeSectionAnnotations(lyrics);
+        lyrics = LyricsMassagingUtils.removeSectionAnnotations(lyrics);
 
         // get rid of "boring words"
-        lyrics = removeBoringWords(lyrics);
-
-        LOGGER.info("the more interesting lyrics are: {}", lyrics);
+        lyrics = LyricsMassagingUtils.removeBoringWords(lyrics, objectMapper);
 
         // generate the word cloud
-        createWordCloud(lyrics, "build/wordcloud_circle_sqrt_font.png");
+        LOGGER.info("Generating the word cloud");
+        wordCloudGenerator.generate(
+            lyrics, String.format("build/wordcloud-%s.png", playlist.getName()));
 
         System.exit(SpringApplication.exit(configurableApplicationContext));
-      }
-
-      private void createWordCloud(final List<String> lyrics, final String outputFileName) {
-        final FrequencyAnalyzer frequencyAnalyzer = new FrequencyAnalyzer();
-        final WordCloud wordCloud =
-            new WordCloud(new Dimension(600, 600), CollisionMode.PIXEL_PERFECT);
-        wordCloud.setPadding(2);
-        wordCloud.setBackground(new CircleBackground(300));
-        wordCloud.setColorPalette(
-            new ColorPalette(
-                new Color(0x4055F1),
-                new Color(0x408DF1),
-                new Color(0x40AAF1),
-                new Color(0x40C5F1),
-                new Color(0x40D3F1),
-                new Color(0xFFFFFF)));
-        wordCloud.setFontScalar(new SqrtFontScalar(10, 40));
-        wordCloud.build(frequencyAnalyzer.load(lyrics));
-        wordCloud.writeToFile(outputFileName);
-      }
-
-      private List<String> removeSectionAnnotations(final List<String> lyrics) {
-        final Pattern sectionAnnotationPattern = Pattern.compile("\\[.*\\]");
-
-        final ImmutableList.Builder<String> updatedLyricsBuilder =
-            ImmutableList.builderWithExpectedSize(lyrics.size());
-
-        for (final String songLyrics : lyrics) {
-          updatedLyricsBuilder.add(sectionAnnotationPattern.matcher(songLyrics).replaceAll(""));
-        }
-
-        return updatedLyricsBuilder.build();
-      }
-
-      private List<String> removeBoringWords(final List<String> lyrics) throws IOException {
-        final BoringWords boringWords =
-            objectMapper.readValue(Resources.getResource("boring-words.json"), BoringWords.class);
-
-        final Pattern boringWordsPattern =
-            Pattern.compile(
-                String.format("\\b(%s)\\b", Joiner.on('|').join(boringWords.getBoringWords())),
-                Pattern.CASE_INSENSITIVE);
-
-        final ImmutableList.Builder<String> updatedLyricsBuilder =
-            ImmutableList.builderWithExpectedSize(lyrics.size());
-
-        for (final String songLyrics : lyrics) {
-          updatedLyricsBuilder.add(boringWordsPattern.matcher(songLyrics).replaceAll(""));
-        }
-
-        return updatedLyricsBuilder.build();
       }
     };
   }
