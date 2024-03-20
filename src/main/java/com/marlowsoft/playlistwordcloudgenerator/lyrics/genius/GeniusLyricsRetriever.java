@@ -62,6 +62,7 @@ public class GeniusLyricsRetriever extends GeniusApiBase
     final SearchReply searchReply = geniusSongSearch.search(searchRequest.build());
 
     // it's a pretty good assumption the first song in the list is the one we're looking for
+    // TODO log a warning if a song wasn't found
     final List<Long> songIds =
         searchReply.getSearchResults().values().stream()
             .filter(geniusSearchReply -> !geniusSearchReply.getResponse().getHits().isEmpty())
