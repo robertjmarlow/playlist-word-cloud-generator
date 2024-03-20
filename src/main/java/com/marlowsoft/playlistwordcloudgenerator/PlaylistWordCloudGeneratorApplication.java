@@ -73,7 +73,6 @@ public class PlaylistWordCloudGeneratorApplication {
         List<String> lyrics =
             lyricsResponse.getLyricsResponseTracks().stream()
                 .map(LyricsResponse.LyricsResponseTrack::getLyrics)
-                .flatMap(List::stream)
                 .collect(Collectors.toList());
 
         LOGGER.info("i got these lyrics back: {}", lyrics);

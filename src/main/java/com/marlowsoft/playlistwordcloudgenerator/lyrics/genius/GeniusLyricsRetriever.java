@@ -88,7 +88,7 @@ public class GeniusLyricsRetriever extends GeniusApiBase
       responseBuilder.addLyricsResponseTracks(
           ImmutableLyricsResponseTrack.builder()
               .song(geniusSongReply.getResponse().getSong())
-              .addLyrics(lyrics.text())
+              .lyrics(lyrics.text())
               .build());
     }
 

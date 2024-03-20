@@ -12,6 +12,6 @@ public interface LyricsResponse {
   interface LyricsResponseTrack {
     GeniusSongReply.Song getSong();
 
-    List<String> getLyrics();
+    String getLyrics();
   }
 }

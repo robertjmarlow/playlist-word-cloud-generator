@@ -1,6 +1,7 @@
 package com.marlowsoft.playlistwordcloudgenerator.lyrics.genius;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -20,6 +21,7 @@ import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.song.Immutabl
 import com.marlowsoft.playlistwordcloudgenerator.lyrics.genius.obj.song.SongRequest;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -159,6 +161,33 @@ public class GeniusLyricsRetrieverTest {
     final LyricsResponse lyricsResponse = geniusLyricsRetriever.getLyrics(lyricsRequest);
 
     assertEquals(3, lyricsResponse.getLyricsResponseTracks().size());
+
+    assertEquals(1015520, lyricsResponse.getLyricsResponseTracks().get(0).getSong().getId());
+    assertEquals(
+        URI.create("https://genius.com/Opeth-ghost-of-perdition-lyrics").toURL(),
+        lyricsResponse.getLyricsResponseTracks().get(0).getSong().getUrl());
+    assertTrue(
+        lyricsResponse.getLyricsResponseTracks().get(0).getLyrics().contains("Ghost of perdition"));
+    assertEquals(8652014, lyricsResponse.getLyricsResponseTracks().get(1).getSong().getId());
+    assertEquals(
+        URI.create("https://genius.com/Periphery-dying-star-lyrics").toURL(),
+        lyricsResponse.getLyricsResponseTracks().get(1).getSong().getUrl());
+    assertTrue(
+        lyricsResponse
+            .getLyricsResponseTracks()
+            .get(1)
+            .getLyrics()
+            .contains("You're as persistent as a dying star"));
+    assertEquals(9715712, lyricsResponse.getLyricsResponseTracks().get(2).getSong().getId());
+    assertEquals(
+        URI.create("https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics").toURL(),
+        lyricsResponse.getLyricsResponseTracks().get(2).getSong().getUrl());
+    assertTrue(
+        lyricsResponse
+            .getLyricsResponseTracks()
+            .get(2)
+            .getLyrics()
+            .contains("I breathe and the world breathes with me"));
   }
 
   @Test
@@ -254,5 +283,22 @@ public class GeniusLyricsRetrieverTest {
     final LyricsResponse lyricsResponse = geniusLyricsRetriever.getLyrics(lyricsRequest);
 
     assertEquals(2, lyricsResponse.getLyricsResponseTracks().size());
+
+    assertEquals(1015520, lyricsResponse.getLyricsResponseTracks().get(0).getSong().getId());
+    assertEquals(
+        URI.create("https://genius.com/Opeth-ghost-of-perdition-lyrics").toURL(),
+        lyricsResponse.getLyricsResponseTracks().get(0).getSong().getUrl());
+    assertTrue(
+        lyricsResponse.getLyricsResponseTracks().get(0).getLyrics().contains("Ghost of perdition"));
+    assertEquals(9715712, lyricsResponse.getLyricsResponseTracks().get(1).getSong().getId());
+    assertEquals(
+        URI.create("https://genius.com/Caligulas-horse-the-world-breathes-with-me-lyrics").toURL(),
+        lyricsResponse.getLyricsResponseTracks().get(1).getSong().getUrl());
+    assertTrue(
+        lyricsResponse
+            .getLyricsResponseTracks()
+            .get(1)
+            .getLyrics()
+            .contains("I breathe and the world breathes with me"));
   }
 }
