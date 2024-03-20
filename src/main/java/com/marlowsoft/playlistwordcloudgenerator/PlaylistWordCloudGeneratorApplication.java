@@ -63,7 +63,7 @@ public class PlaylistWordCloudGeneratorApplication {
             lyricsRetriever.getLyrics(lyricsRequestBuilder.build());
 
         // smash all the lyrics into a single list
-        LOGGER.info("Messing around with the lyrics a bit");
+        LOGGER.info("Messing around with the lyrics a bit...");
         List<String> lyrics =
             lyricsResponse.getLyricsResponseTracks().stream()
                 .map(LyricsResponse.LyricsResponseTrack::getLyrics)
