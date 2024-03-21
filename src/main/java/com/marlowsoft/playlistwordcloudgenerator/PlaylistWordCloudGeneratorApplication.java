@@ -44,10 +44,15 @@ public class PlaylistWordCloudGeneratorApplication {
 
       @Override
       public void run(String... args) throws Exception {
+        if (args.length != 1) {
+          LOGGER.error("A Spotify playlist id must be specified, e.g. \"2O7Bd3hKzlaF8IjhGmMzo4\"");
+          System.exit(SpringApplication.exit(configurableApplicationContext));
+        }
+
         // get all the tracks in the playlist
         final Playlist playlist = playlistRetriever.getPlaylist(args[0]);
 
-        LOGGER.info("I found playlist: \"{}\"", playlist.getName());
+        LOGGER.info("I found the playlist: \"{}\"", playlist.getName());
 
         // get lyrics for every track
         final ImmutableLyricsRequest.Builder lyricsRequestBuilder =
@@ -78,7 +83,7 @@ public class PlaylistWordCloudGeneratorApplication {
         // generate the word cloud
         LOGGER.info("Generating the word cloud");
         wordCloudGenerator.generate(
-            lyrics, String.format("build/wordcloud-%s.png", playlist.getName()));
+            lyrics, String.format("generated-wordclouds/wordcloud-%s.png", playlist.getName()));
 
         System.exit(SpringApplication.exit(configurableApplicationContext));
       }
