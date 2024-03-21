@@ -16,7 +16,7 @@ abstract class GeniusApiBase {
 
     if (CLIENT_ACCESS_TOKEN.isEmpty()) {
       LOGGER.warn(
-          "GENIUS_CLIENT_CLIENT_ACCESS_TOKEN was not set. This will probably result in 401s when calling the Genius API. Set this in the environment variables.");
+          "GENIUS_CLIENT_ACCESS_TOKEN was not set. This will probably result in 401s when calling the Genius API. Set this in the environment variables.");
     }
   }
 
