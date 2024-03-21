@@ -25,12 +25,12 @@ public class WordCloudGeneratorImpl implements WordCloudGenerator {
     wordCloud.setBackground(new CircleBackground(500));
     wordCloud.setColorPalette(
         new ColorPalette(
-            new Color(0x344E41),
-            new Color(0x3A5A40),
-            new Color(0x588157),
-            new Color(0xA3B18A),
-            new Color(0xDAD7CD)));
-    wordCloud.setFontScalar(new SqrtFontScalar(10, 60));
+            new Color(0xe7ecef),
+            new Color(0x274c77),
+            new Color(0x6096ba),
+            new Color(0xa3cef1),
+            new Color(0x8b8c89)));
+    wordCloud.setFontScalar(new SqrtFontScalar(10, 70));
     wordCloud.build(wordFrequencies);
     wordCloud.writeToFile(outputFileName);
   }
