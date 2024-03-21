@@ -15,14 +15,14 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.shell.ShellApplicationRunner;
 
 @SpringBootApplication
-public class PlaylistWordCloudGeneratorApplication {
+public class PlaylistWordCloudGeneratorApplication implements ShellApplicationRunner {
   private static final Logger LOGGER =
       LogManager.getLogger(PlaylistWordCloudGeneratorApplication.class);
 
@@ -30,63 +30,57 @@ public class PlaylistWordCloudGeneratorApplication {
     SpringApplication.run(PlaylistWordCloudGeneratorApplication.class, args);
   }
 
-  @Bean
-  public CommandLineRunner commandLineRunner(
-      ConfigurableApplicationContext configurableApplicationContext) {
-    return new CommandLineRunner() {
-      @Autowired ObjectMapper objectMapper;
+  @Autowired ConfigurableApplicationContext configurableApplicationContext;
 
-      @Autowired PlaylistRetriever<Playlist, String> playlistRetriever;
+  @Autowired ObjectMapper objectMapper;
 
-      @Autowired LyricsRetriever<LyricsResponse, LyricsRequest> lyricsRetriever;
+  @Autowired PlaylistRetriever<Playlist, String> playlistRetriever;
 
-      @Autowired WordCloudGenerator wordCloudGenerator;
+  @Autowired LyricsRetriever<LyricsResponse, LyricsRequest> lyricsRetriever;
 
-      @Override
-      public void run(String... args) throws Exception {
-        if (args.length != 1) {
-          LOGGER.error("A Spotify playlist id must be specified, e.g. \"2O7Bd3hKzlaF8IjhGmMzo4\"");
-          System.exit(SpringApplication.exit(configurableApplicationContext));
-        }
+  @Autowired WordCloudGenerator wordCloudGenerator;
 
-        // get all the tracks in the playlist
-        final Playlist playlist = playlistRetriever.getPlaylist(args[0]);
+  @Override
+  public void run(ApplicationArguments args) throws Exception {
+    if (args.getSourceArgs().length != 1) {
+      LOGGER.error("A Spotify playlist id must be specified, e.g. \"2O7Bd3hKzlaF8IjhGmMzo4\"");
+      System.exit(SpringApplication.exit(configurableApplicationContext));
+    }
 
-        LOGGER.info("I found the playlist: \"{}\"", playlist.getName());
+    // get all the tracks in the playlist
+    final Playlist playlist = playlistRetriever.getPlaylist(args.getSourceArgs()[0]);
 
-        // get lyrics for every track
-        final ImmutableLyricsRequest.Builder lyricsRequestBuilder =
-            ImmutableLyricsRequest.builder();
-        for (final Playlist.TrackItem trackItem : playlist.getTracks().getTrackItems()) {
-          lyricsRequestBuilder.addLyricsRequestTracks(
-              ImmutableLyricsRequestTrack.builder()
-                  .artist(trackItem.getTrackObject().getArtists().getFirst().getName())
-                  .song(trackItem.getTrackObject().getName())
-                  .build());
-        }
-        final LyricsResponse lyricsResponse =
-            lyricsRetriever.getLyrics(lyricsRequestBuilder.build());
+    LOGGER.info("I found the playlist: \"{}\"", playlist.getName());
 
-        // smash all the lyrics into a single list
-        LOGGER.info("Messing around with the lyrics a bit...");
-        List<String> lyrics =
-            lyricsResponse.getLyricsResponseTracks().stream()
-                .map(LyricsResponse.LyricsResponseTrack::getLyrics)
-                .collect(Collectors.toList());
+    // get lyrics for every track
+    final ImmutableLyricsRequest.Builder lyricsRequestBuilder = ImmutableLyricsRequest.builder();
+    for (final Playlist.TrackItem trackItem : playlist.getTracks().getTrackItems()) {
+      lyricsRequestBuilder.addLyricsRequestTracks(
+          ImmutableLyricsRequestTrack.builder()
+              .artist(trackItem.getTrackObject().getArtists().getFirst().getName())
+              .song(trackItem.getTrackObject().getName())
+              .build());
+    }
+    final LyricsResponse lyricsResponse = lyricsRetriever.getLyrics(lyricsRequestBuilder.build());
 
-        // get rid of section annotations
-        lyrics = LyricsMassagingUtils.removeSectionAnnotations(lyrics);
+    // smash all the lyrics into a single list
+    LOGGER.info("Messing around with the lyrics a bit...");
+    List<String> lyrics =
+        lyricsResponse.getLyricsResponseTracks().stream()
+            .map(LyricsResponse.LyricsResponseTrack::getLyrics)
+            .collect(Collectors.toList());
 
-        // get rid of "boring words"
-        lyrics = LyricsMassagingUtils.removeBoringWords(lyrics, objectMapper);
+    // get rid of section annotations
+    lyrics = LyricsMassagingUtils.removeSectionAnnotations(lyrics);
 
-        // generate the word cloud
-        LOGGER.info("Generating the word cloud");
-        wordCloudGenerator.generate(
-            lyrics, String.format("generated-wordclouds/wordcloud-%s.png", playlist.getName()));
+    // get rid of "boring words"
+    lyrics = LyricsMassagingUtils.removeBoringWords(lyrics, objectMapper);
 
-        System.exit(SpringApplication.exit(configurableApplicationContext));
-      }
-    };
+    // generate the word cloud
+    LOGGER.info("Generating the word cloud");
+    wordCloudGenerator.generate(
+        lyrics, String.format("generated-wordclouds/wordcloud-%s.png", playlist.getName()));
+
+    System.exit(SpringApplication.exit(configurableApplicationContext));
   }
 }
