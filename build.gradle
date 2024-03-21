@@ -21,6 +21,7 @@ dependencies {
 	def immutablesVersion = "2.10.1"
 	annotationProcessor "org.immutables:value:$immutablesVersion"
 	compileOnly "org.immutables:value:$immutablesVersion"
+	implementation 'commons-io:commons-io:2.15.1'
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava'
 	implementation 'com.google.guava:guava:33.0.0-jre'
 	implementation 'com.kennycason:kumo-core:1.28'
