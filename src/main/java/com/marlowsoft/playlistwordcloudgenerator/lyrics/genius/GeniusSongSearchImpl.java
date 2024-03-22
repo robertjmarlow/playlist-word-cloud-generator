@@ -44,6 +44,7 @@ public class GeniusSongSearchImpl extends GeniusApiBase implements GeniusSongSea
             searchRequestItem.getArtist(),
             searchRequestItem.getTrack());
 
+        // TODO sometimes this search is really wonky. is there anything that can be done about it?
         final HttpResponse<String> searchResponse =
             client.send(
                 HttpRequest.newBuilder()
