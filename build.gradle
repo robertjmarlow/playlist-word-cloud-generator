@@ -30,7 +30,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 	implementation 'com.google.guava:guava:33.0.0-jre'
 	implementation 'com.kennycason:kumo-core:1.28'
-	implementation 'org.springframework:spring-web'
+	implementation 'org.springframework:spring-web:6.1.5'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.shell:spring-shell-starter'
 	implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
