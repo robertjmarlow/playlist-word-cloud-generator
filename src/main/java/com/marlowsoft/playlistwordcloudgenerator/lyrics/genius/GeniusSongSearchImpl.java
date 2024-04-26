@@ -94,6 +94,7 @@ public class GeniusSongSearchImpl extends GeniusApiBase implements GeniusSongSea
                   .response(ImmutableResponse.builder().addAllHits(filteredHits).build())
                   .build();
 
+          // TODO log a warning if a song wasn't found
           searchReply.putSearchResults(searchRequestItem, filteredGeniusSearchReply);
         }
       }
